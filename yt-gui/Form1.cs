@@ -1,3 +1,6 @@
+using System.Diagnostics;
+using System.Runtime.InteropServices;
+
 namespace yt_gui
 {
     public partial class Form1 : Form
@@ -24,9 +27,6 @@ namespace yt_gui
             WaitForVideoBox.Enabled = WaitForVideoCheck.Checked;
             CompatOptionsBox.Enabled = CompatOptionsCheck.Checked;
             AliasBox.Enabled = AliasCheck.Checked;
-
-            //checking polar options
-            //NoAbortCheck.Checked = true;
         }
 
         private void DefaultSearchCheck_CheckedChanged(object sender, EventArgs e)
@@ -36,7 +36,7 @@ namespace yt_gui
 
         private void WaitForVideoCheck_CheckedChanged(object sender, EventArgs e)
         {
-            WaitForVideoBox.Enabled = WaitForVideoCheck.Checked;
+            
         }
 
         private void CompatOptionsCheck_CheckedChanged(object sender, EventArgs e)
@@ -67,6 +67,46 @@ namespace yt_gui
         private void NoFlatPlaylistCheck_Click(object sender, EventArgs e)
         {
             FlatPlaylistCheck.Checked = false;
+        }
+
+        private void LiveFromStartCheck_Click(object sender, EventArgs e)
+        {
+            NoLiveFromStartCheck.Checked = false;
+        }
+
+        private void NoLiveFromStartCheck_Click(object sender, EventArgs e)
+        {
+            LiveFromStartCheck.Checked = false;
+        }
+
+        private void WaitForVideoCheck_Click(object sender, EventArgs e)
+        {
+            WaitForVideoBox.Enabled = WaitForVideoCheck.Checked;
+            NoWaitForVideoCheck.Checked = false;
+        }
+
+        private void NoWaitForVideoCheck_Click(object sender, EventArgs e)
+        {
+            WaitForVideoBox.Enabled = false;
+            WaitForVideoCheck.Checked = WaitForVideoBox.Enabled;
+        }
+
+        private void MarkWatchedCheck_Click(object sender, EventArgs e)
+        {
+            NoMarkWatchedCheck.Checked = false;
+        }
+
+        private void NoMarkWatchedCheck_Click(object sender, EventArgs e)
+        {
+            MarkWatchedCheck.Checked = false;
+        }
+
+        private void DownloadButton_Click(object sender, EventArgs e)
+        {
+            string ytdlp = @"C:\Users\Julien\Documents\GitHub\yt-gui\yt-gui\external stuff\yt-dlp.exe";
+            ProcessStartInfo cmd = new ProcessStartInfo(ytdlp);
+            cmd.Arguments = LinkBox.Text;
+            Process.Start(cmd);
         }
     }
 }
