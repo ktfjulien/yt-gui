@@ -10,6 +10,79 @@ namespace yt_gui
             InitializeComponent();
         }
 
+        private String GenerateCommand()
+        {
+            string command = "yt-dlp.exe";
+            command += " " + LinkBox.Text;
+
+            //// GENERAL SECTION
+            //if (ignoreerrorscheck.Checked) { command += " " + ignoreerrorscheck.Text; };
+            //if (NoAbortCheck.Checked) { command += " " +  NoAbortCheck.Text; };
+            //if (AbortCheck.Checked) { command += " " +  AbortCheck.Text; };
+            //if (forcegenericextractorcheck.Checked) { command += " " +  forcegenericextractorcheck.Text; };
+            //if (DefaultSearchCheck.Checked) { command += " " +  DefaultSearchCheck.Text; };
+            //// TEXT BOX NEEDED
+            //if (checkBox6.Checked) { command += " " +  checkBox6.Text; };
+            //if (checkBox7.Checked) { command += " " +  checkBox7.Text; };
+            //if (FlatPlaylistCheck.Checked) { command += " " +  FlatPlaylistCheck.Text; };
+            //if (NoFlatPlaylistCheck.Checked) { command += " " +  NoFlatPlaylistCheck.Text; };
+            //if (LiveFromStartCheck.Checked) { command += " " +  LiveFromStartCheck.Text; };
+            //if (NoLiveFromStartCheck.Checked) { command += " " +  NoLiveFromStartCheck.Text; };
+            //if (WaitForVideoCheck.Checked) { command += " " +  WaitForVideoCheck.Text; };
+            //// TEXT BOX NEEDED
+            //if (NoWaitForVideoCheck.Checked) { command += " " +  NoWaitForVideoCheck.Text; };
+            //if (MarkWatchedCheck.Checked) { command += " " +  MarkWatchedCheck.Text; };
+            //if (NoMarkWatchedCheck.Checked) { command += " " +  NoMarkWatchedCheck.Text; };
+            //if (checkBox16.Checked) { command += " " +  checkBox16.Text; };
+            //if (CompatOptionsCheck.Checked) { command += " " +  CompatOptionsCheck.Text; };
+            //// TEXT BOX NEEDED
+            //if (AliasCheck.Checked) { command += " " +  AliasCheck.Text; };
+            //// TEXT BOX NEEDED
+
+            //// VIDEO SELECTION SECTION
+            //if (checkBox13.Checked) { command += " " +  checkBox13.Text; };
+            //// TEXT BOX NEEDED
+            //if (checkBox14.Checked) { command += " " +  checkBox14.Text; };
+            //// TEXT BOX NEEDED
+            //if (checkBox23.Checked) { command += " " +  checkBox23.Text; };
+            //// TEXT BOX NEEDED
+            //if (checkBox22.Checked) { command += " " +  checkBox22.Text; };
+            //if (checkBox21.Checked) { command += " " +  checkBox21.Text; };
+            //if (checkBox20.Checked) { command += " " +  checkBox20.Text; };
+            //if (checkBox19.Checked) { command += " " +  checkBox19.Text; };
+            //// TEXT BOX NEEDED
+            //if (checkBox18.Checked) { command += " " +  checkBox18.Text; };
+            //if (checkBox17.Checked) { command += " " +  checkBox17.Text; };
+            //if (REPLACETHIS.Checked) { command += " " +  ignoreerrorscheck.Text; };
+            //if (REPLACETHIS.Checked) { command += " " +  ignoreerrorscheck.Text; };
+            //if (REPLACETHIS.Checked) { command += " " +  ignoreerrorscheck.Text; };
+            //if (REPLACETHIS.Checked) { command += " " +  ignoreerrorscheck.Text; };
+            //if (REPLACETHIS.Checked) { command += " " +  ignoreerrorscheck.Text; };
+            //if (REPLACETHIS.Checked) { command += " " +  ignoreerrorscheck.Text; };
+            //if (REPLACETHIS.Checked) { command += " " +  ignoreerrorscheck.Text; };
+            //if (REPLACETHIS.Checked) { command += " " +  ignoreerrorscheck.Text; };
+            //if (REPLACETHIS.Checked) { command += " " +  ignoreerrorscheck.Text; };
+
+
+            //foreach (CheckBox y in GeneralGroupBox.Controls)
+            //{
+            //    if (y.Checked) { command += " " + y.Text; };
+            //}
+
+            foreach (var y in GeneralGroupBox.Controls.OfType<CheckBox>() ) 
+            {
+                if (y.Checked) { command += " " + y.Text; };
+            }
+
+            foreach (var y in VideoSelectionGroupBox.Controls.OfType<CheckBox>())
+            {
+                if (y.Checked) { command += " " + y.Text; };
+            }
+
+
+            return command;
+        }
+
         private void folderBrowserDialog1_HelpRequest(object sender, EventArgs e)
         {
 
@@ -103,10 +176,12 @@ namespace yt_gui
 
         private void DownloadButton_Click(object sender, EventArgs e)
         {
-            string ytdlp = @"C:\Users\Julien\Documents\GitHub\yt-gui\yt-gui\external stuff\yt-dlp.exe";
-            ProcessStartInfo cmd = new ProcessStartInfo(ytdlp);
-            cmd.Arguments = LinkBox.Text;
-            Process.Start(cmd);
+            //string ytdlp = @"C:\Users\Julien\Documents\GitHub\yt-gui\yt-gui\external stuff\yt-dlp.exe";
+            //ProcessStartInfo cmd = new ProcessStartInfo(ytdlp);
+            //cmd.Arguments = LinkBox.Text;
+            //Process.Start(cmd);
+
+            testingbox.Text = GenerateCommand();
         }
     }
 }
