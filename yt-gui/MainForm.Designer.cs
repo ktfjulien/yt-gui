@@ -1,6 +1,6 @@
 ﻿namespace yt_gui
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -81,7 +81,7 @@
             this.checkBox10 = new System.Windows.Forms.CheckBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.checkBox9 = new System.Windows.Forms.CheckBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.GeoVerificationProxyTextbox = new System.Windows.Forms.TextBox();
             this.checkBox8 = new System.Windows.Forms.CheckBox();
             this.MainTabControl = new System.Windows.Forms.TabControl();
             this.Page1 = new System.Windows.Forms.TabPage();
@@ -121,6 +121,7 @@
             this.MainTabControl.SuspendLayout();
             this.Page1.SuspendLayout();
             this.VideoSelectionGroupBox.SuspendLayout();
+            this.Page2.SuspendLayout();
             this.SuspendLayout();
             // 
             // LinkLabel
@@ -140,7 +141,7 @@
             this.andTheThirdToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1705, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1197, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -221,6 +222,7 @@
             // 
             // AliasBox
             // 
+            this.AliasBox.Enabled = false;
             this.AliasBox.Location = new System.Drawing.Point(76, 617);
             this.AliasBox.Name = "AliasBox";
             this.AliasBox.Size = new System.Drawing.Size(241, 23);
@@ -231,14 +233,14 @@
             this.AliasCheck.AutoSize = true;
             this.AliasCheck.Location = new System.Drawing.Point(8, 621);
             this.AliasCheck.Name = "AliasCheck";
-            this.AliasCheck.Size = new System.Drawing.Size(62, 19);
+            this.AliasCheck.Size = new System.Drawing.Size(59, 19);
             this.AliasCheck.TabIndex = 39;
-            this.AliasCheck.Text = "--alias:";
+            this.AliasCheck.Text = "--alias";
             this.AliasCheck.UseVisualStyleBackColor = true;
-            this.AliasCheck.CheckedChanged += new System.EventHandler(this.AliasCheck_CheckedChanged);
             // 
             // CompatOptionsBox
             // 
+            this.CompatOptionsBox.Enabled = false;
             this.CompatOptionsBox.Location = new System.Drawing.Point(139, 592);
             this.CompatOptionsBox.Name = "CompatOptionsBox";
             this.CompatOptionsBox.Size = new System.Drawing.Size(241, 23);
@@ -249,11 +251,10 @@
             this.CompatOptionsCheck.AutoSize = true;
             this.CompatOptionsCheck.Location = new System.Drawing.Point(8, 596);
             this.CompatOptionsCheck.Name = "CompatOptionsCheck";
-            this.CompatOptionsCheck.Size = new System.Drawing.Size(125, 19);
+            this.CompatOptionsCheck.Size = new System.Drawing.Size(122, 19);
             this.CompatOptionsCheck.TabIndex = 37;
-            this.CompatOptionsCheck.Text = "--compat-options:";
+            this.CompatOptionsCheck.Text = "--compat-options";
             this.CompatOptionsCheck.UseVisualStyleBackColor = true;
-            this.CompatOptionsCheck.CheckedChanged += new System.EventHandler(this.CompatOptionsCheck_CheckedChanged);
             // 
             // checkBox16
             // 
@@ -274,7 +275,7 @@
             this.NoMarkWatchedCheck.TabIndex = 35;
             this.NoMarkWatchedCheck.Text = "--no-mark-watched";
             this.NoMarkWatchedCheck.UseVisualStyleBackColor = true;
-            this.NoMarkWatchedCheck.Click += new System.EventHandler(this.NoMarkWatchedCheck_Click);
+            this.NoMarkWatchedCheck.Click += new System.EventHandler(this.PolarClicked);
             // 
             // MarkWatchedCheck
             // 
@@ -285,7 +286,7 @@
             this.MarkWatchedCheck.TabIndex = 34;
             this.MarkWatchedCheck.Text = "--mark-watched";
             this.MarkWatchedCheck.UseVisualStyleBackColor = true;
-            this.MarkWatchedCheck.Click += new System.EventHandler(this.MarkWatchedCheck_Click);
+            this.MarkWatchedCheck.Click += new System.EventHandler(this.PolarClicked);
             // 
             // NoWaitForVideoCheck
             // 
@@ -296,10 +297,11 @@
             this.NoWaitForVideoCheck.TabIndex = 33;
             this.NoWaitForVideoCheck.Text = "--no-wait-for-video";
             this.NoWaitForVideoCheck.UseVisualStyleBackColor = true;
-            this.NoWaitForVideoCheck.Click += new System.EventHandler(this.NoWaitForVideoCheck_Click);
+            this.NoWaitForVideoCheck.Click += new System.EventHandler(this.PolarClicked);
             // 
             // WaitForVideoBox
             // 
+            this.WaitForVideoBox.Enabled = false;
             this.WaitForVideoBox.Location = new System.Drawing.Point(129, 467);
             this.WaitForVideoBox.Name = "WaitForVideoBox";
             this.WaitForVideoBox.Size = new System.Drawing.Size(241, 23);
@@ -310,12 +312,11 @@
             this.WaitForVideoCheck.AutoSize = true;
             this.WaitForVideoCheck.Location = new System.Drawing.Point(8, 471);
             this.WaitForVideoCheck.Name = "WaitForVideoCheck";
-            this.WaitForVideoCheck.Size = new System.Drawing.Size(115, 19);
+            this.WaitForVideoCheck.Size = new System.Drawing.Size(112, 19);
             this.WaitForVideoCheck.TabIndex = 31;
-            this.WaitForVideoCheck.Text = "--wait-for-video:";
+            this.WaitForVideoCheck.Text = "--wait-for-video";
             this.WaitForVideoCheck.UseVisualStyleBackColor = true;
-            this.WaitForVideoCheck.CheckedChanged += new System.EventHandler(this.WaitForVideoCheck_CheckedChanged);
-            this.WaitForVideoCheck.Click += new System.EventHandler(this.WaitForVideoCheck_Click);
+            this.WaitForVideoCheck.Click += new System.EventHandler(this.PolarClicked);
             // 
             // NoLiveFromStartCheck
             // 
@@ -326,7 +327,7 @@
             this.NoLiveFromStartCheck.TabIndex = 30;
             this.NoLiveFromStartCheck.Text = "--no-live-from-start";
             this.NoLiveFromStartCheck.UseVisualStyleBackColor = true;
-            this.NoLiveFromStartCheck.Click += new System.EventHandler(this.NoLiveFromStartCheck_Click);
+            this.NoLiveFromStartCheck.Click += new System.EventHandler(this.PolarClicked);
             // 
             // LiveFromStartCheck
             // 
@@ -337,7 +338,7 @@
             this.LiveFromStartCheck.TabIndex = 29;
             this.LiveFromStartCheck.Text = "--live-from-start";
             this.LiveFromStartCheck.UseVisualStyleBackColor = true;
-            this.LiveFromStartCheck.Click += new System.EventHandler(this.LiveFromStartCheck_Click);
+            this.LiveFromStartCheck.Click += new System.EventHandler(this.PolarClicked);
             // 
             // NoFlatPlaylistCheck
             // 
@@ -348,7 +349,7 @@
             this.NoFlatPlaylistCheck.TabIndex = 28;
             this.NoFlatPlaylistCheck.Text = "--no-flat-playlist";
             this.NoFlatPlaylistCheck.UseVisualStyleBackColor = true;
-            this.NoFlatPlaylistCheck.Click += new System.EventHandler(this.NoFlatPlaylistCheck_Click);
+            this.NoFlatPlaylistCheck.Click += new System.EventHandler(this.PolarClicked);
             // 
             // FlatPlaylistCheck
             // 
@@ -359,7 +360,7 @@
             this.FlatPlaylistCheck.TabIndex = 27;
             this.FlatPlaylistCheck.Text = "--flat-playlist";
             this.FlatPlaylistCheck.UseVisualStyleBackColor = true;
-            this.FlatPlaylistCheck.Click += new System.EventHandler(this.FlatPlaylistCheck_Click);
+            this.FlatPlaylistCheck.Click += new System.EventHandler(this.PolarClicked);
             // 
             // checkBox7
             // 
@@ -383,6 +384,7 @@
             // 
             // DefaultSearchBox
             // 
+            this.DefaultSearchBox.Enabled = false;
             this.DefaultSearchBox.Location = new System.Drawing.Point(130, 294);
             this.DefaultSearchBox.Name = "DefaultSearchBox";
             this.DefaultSearchBox.Size = new System.Drawing.Size(241, 23);
@@ -393,11 +395,10 @@
             this.DefaultSearchCheck.AutoSize = true;
             this.DefaultSearchCheck.Location = new System.Drawing.Point(8, 296);
             this.DefaultSearchCheck.Name = "DefaultSearchCheck";
-            this.DefaultSearchCheck.Size = new System.Drawing.Size(115, 19);
+            this.DefaultSearchCheck.Size = new System.Drawing.Size(112, 19);
             this.DefaultSearchCheck.TabIndex = 23;
-            this.DefaultSearchCheck.Text = "--default-search:";
+            this.DefaultSearchCheck.Text = "--default-search";
             this.DefaultSearchCheck.UseVisualStyleBackColor = true;
-            this.DefaultSearchCheck.CheckedChanged += new System.EventHandler(this.DefaultSearchCheck_CheckedChanged);
             // 
             // forcegenericextractorcheck
             // 
@@ -445,7 +446,7 @@
             this.AbortCheck.TabIndex = 18;
             this.AbortCheck.Text = "--abort-on-error";
             this.AbortCheck.UseVisualStyleBackColor = true;
-            this.AbortCheck.Click += new System.EventHandler(this.AbortCheck_Click);
+            this.AbortCheck.Click += new System.EventHandler(this.PolarClicked);
             // 
             // NoAbortCheck
             // 
@@ -456,7 +457,7 @@
             this.NoAbortCheck.TabIndex = 17;
             this.NoAbortCheck.Text = "--no-abort-on-error";
             this.NoAbortCheck.UseVisualStyleBackColor = true;
-            this.NoAbortCheck.Click += new System.EventHandler(this.NoAbortCheck_Click);
+            this.NoAbortCheck.Click += new System.EventHandler(this.PolarClicked);
             // 
             // ignoreerrorscheck
             // 
@@ -467,6 +468,7 @@
             this.ignoreerrorscheck.TabIndex = 16;
             this.ignoreerrorscheck.Text = "--ignore-errors";
             this.ignoreerrorscheck.UseVisualStyleBackColor = true;
+            this.ignoreerrorscheck.CheckedChanged += new System.EventHandler(this.PolarClicked);
             // 
             // Update
             // 
@@ -507,7 +509,7 @@
             this.NetworkGroupBox.Controls.Add(this.SocketTimeoutCheck);
             this.NetworkGroupBox.Controls.Add(this.ProxyTextBox);
             this.NetworkGroupBox.Controls.Add(this.ProxyCheck);
-            this.NetworkGroupBox.Location = new System.Drawing.Point(946, 236);
+            this.NetworkGroupBox.Location = new System.Drawing.Point(7, 6);
             this.NetworkGroupBox.Name = "NetworkGroupBox";
             this.NetworkGroupBox.Size = new System.Drawing.Size(386, 186);
             this.NetworkGroupBox.TabIndex = 13;
@@ -529,9 +531,9 @@
             this.checkBox3.AutoSize = true;
             this.checkBox3.Location = new System.Drawing.Point(11, 130);
             this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(112, 19);
+            this.checkBox3.Size = new System.Drawing.Size(90, 19);
             this.checkBox3.TabIndex = 7;
-            this.checkBox3.Text = "--force-ipv6 / -6";
+            this.checkBox3.Text = "--force-ipv6";
             this.checkBox3.UseVisualStyleBackColor = true;
             // 
             // checkBox2
@@ -539,13 +541,14 @@
             this.checkBox2.AutoSize = true;
             this.checkBox2.Location = new System.Drawing.Point(11, 103);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(112, 19);
+            this.checkBox2.Size = new System.Drawing.Size(90, 19);
             this.checkBox2.TabIndex = 6;
-            this.checkBox2.Text = "--force-ipv4 / -4";
+            this.checkBox2.Text = "--force-ipv4";
             this.checkBox2.UseVisualStyleBackColor = true;
             // 
             // textBox2
             // 
+            this.textBox2.Enabled = false;
             this.textBox2.Location = new System.Drawing.Point(134, 74);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(165, 23);
@@ -556,13 +559,14 @@
             this.SourceAddressIPCheck.AutoSize = true;
             this.SourceAddressIPCheck.Location = new System.Drawing.Point(11, 76);
             this.SourceAddressIPCheck.Name = "SourceAddressIPCheck";
-            this.SourceAddressIPCheck.Size = new System.Drawing.Size(119, 19);
+            this.SourceAddressIPCheck.Size = new System.Drawing.Size(116, 19);
             this.SourceAddressIPCheck.TabIndex = 4;
-            this.SourceAddressIPCheck.Text = "--source-address:";
+            this.SourceAddressIPCheck.Text = "--source-address";
             this.SourceAddressIPCheck.UseVisualStyleBackColor = true;
             // 
             // textBox1
             // 
+            this.textBox1.Enabled = false;
             this.textBox1.Location = new System.Drawing.Point(134, 47);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(165, 23);
@@ -573,13 +577,14 @@
             this.SocketTimeoutCheck.AutoSize = true;
             this.SocketTimeoutCheck.Location = new System.Drawing.Point(11, 49);
             this.SocketTimeoutCheck.Name = "SocketTimeoutCheck";
-            this.SocketTimeoutCheck.Size = new System.Drawing.Size(120, 19);
+            this.SocketTimeoutCheck.Size = new System.Drawing.Size(117, 19);
             this.SocketTimeoutCheck.TabIndex = 2;
-            this.SocketTimeoutCheck.Text = "--socket-timeout:";
+            this.SocketTimeoutCheck.Text = "--socket-timeout";
             this.SocketTimeoutCheck.UseVisualStyleBackColor = true;
             // 
             // ProxyTextBox
             // 
+            this.ProxyTextBox.Enabled = false;
             this.ProxyTextBox.Location = new System.Drawing.Point(81, 20);
             this.ProxyTextBox.Name = "ProxyTextBox";
             this.ProxyTextBox.Size = new System.Drawing.Size(165, 23);
@@ -590,9 +595,9 @@
             this.ProxyCheck.AutoSize = true;
             this.ProxyCheck.Location = new System.Drawing.Point(11, 22);
             this.ProxyCheck.Name = "ProxyCheck";
-            this.ProxyCheck.Size = new System.Drawing.Size(69, 19);
+            this.ProxyCheck.Size = new System.Drawing.Size(66, 19);
             this.ProxyCheck.TabIndex = 0;
-            this.ProxyCheck.Text = "--proxy:";
+            this.ProxyCheck.Text = "--proxy";
             this.ProxyCheck.UseVisualStyleBackColor = true;
             // 
             // GeorestrictionGroupBox
@@ -604,9 +609,9 @@
             this.GeorestrictionGroupBox.Controls.Add(this.checkBox10);
             this.GeorestrictionGroupBox.Controls.Add(this.textBox4);
             this.GeorestrictionGroupBox.Controls.Add(this.checkBox9);
-            this.GeorestrictionGroupBox.Controls.Add(this.textBox3);
+            this.GeorestrictionGroupBox.Controls.Add(this.GeoVerificationProxyTextbox);
             this.GeorestrictionGroupBox.Controls.Add(this.checkBox8);
-            this.GeorestrictionGroupBox.Location = new System.Drawing.Point(1021, 428);
+            this.GeorestrictionGroupBox.Location = new System.Drawing.Point(7, 198);
             this.GeorestrictionGroupBox.Name = "GeorestrictionGroupBox";
             this.GeorestrictionGroupBox.Size = new System.Drawing.Size(386, 161);
             this.GeorestrictionGroupBox.TabIndex = 14;
@@ -635,6 +640,7 @@
             // 
             // textBox5
             // 
+            this.textBox5.Enabled = false;
             this.textBox5.Location = new System.Drawing.Point(163, 130);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(165, 23);
@@ -645,13 +651,14 @@
             this.checkBox10.AutoSize = true;
             this.checkBox10.Location = new System.Drawing.Point(11, 132);
             this.checkBox10.Name = "checkBox10";
-            this.checkBox10.Size = new System.Drawing.Size(149, 19);
+            this.checkBox10.Size = new System.Drawing.Size(146, 19);
             this.checkBox10.TabIndex = 6;
-            this.checkBox10.Text = "--geo-bypass-ip-block:";
+            this.checkBox10.Text = "--geo-bypass-ip-block";
             this.checkBox10.UseVisualStyleBackColor = true;
             // 
             // textBox4
             // 
+            this.textBox4.Enabled = false;
             this.textBox4.Location = new System.Drawing.Point(163, 103);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(165, 23);
@@ -662,26 +669,27 @@
             this.checkBox9.AutoSize = true;
             this.checkBox9.Location = new System.Drawing.Point(11, 105);
             this.checkBox9.Name = "checkBox9";
-            this.checkBox9.Size = new System.Drawing.Size(146, 19);
+            this.checkBox9.Size = new System.Drawing.Size(143, 19);
             this.checkBox9.TabIndex = 4;
-            this.checkBox9.Text = "--geo-bypass-country:";
+            this.checkBox9.Text = "--geo-bypass-country";
             this.checkBox9.UseVisualStyleBackColor = true;
             // 
-            // textBox3
+            // GeoVerificationProxyTextbox
             // 
-            this.textBox3.Location = new System.Drawing.Point(175, 22);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(165, 23);
-            this.textBox3.TabIndex = 3;
+            this.GeoVerificationProxyTextbox.Enabled = false;
+            this.GeoVerificationProxyTextbox.Location = new System.Drawing.Point(175, 22);
+            this.GeoVerificationProxyTextbox.Name = "GeoVerificationProxyTextbox";
+            this.GeoVerificationProxyTextbox.Size = new System.Drawing.Size(165, 23);
+            this.GeoVerificationProxyTextbox.TabIndex = 3;
             // 
             // checkBox8
             // 
             this.checkBox8.AutoSize = true;
             this.checkBox8.Location = new System.Drawing.Point(11, 24);
             this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(158, 19);
+            this.checkBox8.Size = new System.Drawing.Size(155, 19);
             this.checkBox8.TabIndex = 2;
-            this.checkBox8.Text = "--geo-verification-proxy:";
+            this.checkBox8.Text = "--geo-verification-proxy";
             this.checkBox8.UseVisualStyleBackColor = true;
             // 
             // MainTabControl
@@ -744,6 +752,7 @@
             // 
             // textBox12
             // 
+            this.textBox12.Enabled = false;
             this.textBox12.Location = new System.Drawing.Point(178, 453);
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(165, 23);
@@ -751,6 +760,7 @@
             // 
             // textBox11
             // 
+            this.textBox11.Enabled = false;
             this.textBox11.Location = new System.Drawing.Point(137, 333);
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(165, 23);
@@ -758,6 +768,7 @@
             // 
             // textBox10
             // 
+            this.textBox10.Enabled = false;
             this.textBox10.Location = new System.Drawing.Point(147, 285);
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(165, 23);
@@ -765,6 +776,7 @@
             // 
             // textBox9
             // 
+            this.textBox9.Enabled = false;
             this.textBox9.Location = new System.Drawing.Point(122, 165);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(165, 23);
@@ -772,6 +784,7 @@
             // 
             // textBox8
             // 
+            this.textBox8.Enabled = false;
             this.textBox8.Location = new System.Drawing.Point(114, 76);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(165, 23);
@@ -779,6 +792,7 @@
             // 
             // textBox7
             // 
+            this.textBox7.Enabled = false;
             this.textBox7.Location = new System.Drawing.Point(122, 47);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(165, 23);
@@ -786,6 +800,7 @@
             // 
             // textBox6
             // 
+            this.textBox6.Enabled = false;
             this.textBox6.Location = new System.Drawing.Point(122, 21);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(165, 23);
@@ -806,10 +821,11 @@
             this.checkBox31.AutoSize = true;
             this.checkBox31.Location = new System.Drawing.Point(6, 287);
             this.checkBox31.Name = "checkBox31";
-            this.checkBox31.Size = new System.Drawing.Size(135, 19);
+            this.checkBox31.Size = new System.Drawing.Size(132, 19);
             this.checkBox31.TabIndex = 17;
-            this.checkBox31.Text = "--download-archive:";
+            this.checkBox31.Text = "--download-archive";
             this.checkBox31.UseVisualStyleBackColor = true;
+            this.checkBox31.Click += new System.EventHandler(this.PolarClicked);
             // 
             // checkBox30
             // 
@@ -820,15 +836,16 @@
             this.checkBox30.TabIndex = 16;
             this.checkBox30.Text = "--no-download-archive";
             this.checkBox30.UseVisualStyleBackColor = true;
+            this.checkBox30.Click += new System.EventHandler(this.PolarClicked);
             // 
             // checkBox29
             // 
             this.checkBox29.AutoSize = true;
             this.checkBox29.Location = new System.Drawing.Point(6, 335);
             this.checkBox29.Name = "checkBox29";
-            this.checkBox29.Size = new System.Drawing.Size(125, 19);
+            this.checkBox29.Size = new System.Drawing.Size(122, 19);
             this.checkBox29.TabIndex = 15;
-            this.checkBox29.Text = "--max-downloads:";
+            this.checkBox29.Text = "--max-downloads";
             this.checkBox29.UseVisualStyleBackColor = true;
             // 
             // checkBox28
@@ -866,9 +883,9 @@
             this.checkBox25.AutoSize = true;
             this.checkBox25.Location = new System.Drawing.Point(6, 455);
             this.checkBox25.Name = "checkBox25";
-            this.checkBox25.Size = new System.Drawing.Size(166, 19);
+            this.checkBox25.Size = new System.Drawing.Size(163, 19);
             this.checkBox25.TabIndex = 11;
-            this.checkBox25.Text = "--skip-playlist-after-errors:";
+            this.checkBox25.Text = "--skip-playlist-after-errors";
             this.checkBox25.UseVisualStyleBackColor = true;
             // 
             // checkBox24
@@ -886,9 +903,9 @@
             this.checkBox23.AutoSize = true;
             this.checkBox23.Location = new System.Drawing.Point(6, 71);
             this.checkBox23.Name = "checkBox23";
-            this.checkBox23.Size = new System.Drawing.Size(102, 19);
+            this.checkBox23.Size = new System.Drawing.Size(99, 19);
             this.checkBox23.TabIndex = 9;
-            this.checkBox23.Text = "--max-filesize:";
+            this.checkBox23.Text = "--max-filesize";
             this.checkBox23.UseVisualStyleBackColor = true;
             // 
             // checkBox22
@@ -930,6 +947,7 @@
             this.checkBox19.TabIndex = 5;
             this.checkBox19.Text = "--match-filters:";
             this.checkBox19.UseVisualStyleBackColor = true;
+            this.checkBox19.Click += new System.EventHandler(this.PolarClicked);
             // 
             // checkBox18
             // 
@@ -940,6 +958,7 @@
             this.checkBox18.TabIndex = 4;
             this.checkBox18.Text = "--no-match-filter";
             this.checkBox18.UseVisualStyleBackColor = true;
+            this.checkBox18.Click += new System.EventHandler(this.PolarClicked);
             // 
             // checkBox17
             // 
@@ -950,6 +969,7 @@
             this.checkBox17.TabIndex = 3;
             this.checkBox17.Text = "--no-playlist";
             this.checkBox17.UseVisualStyleBackColor = true;
+            this.checkBox17.Click += new System.EventHandler(this.PolarClicked);
             // 
             // checkBox15
             // 
@@ -960,15 +980,16 @@
             this.checkBox15.TabIndex = 2;
             this.checkBox15.Text = "--yes-playlist";
             this.checkBox15.UseVisualStyleBackColor = true;
+            this.checkBox15.Click += new System.EventHandler(this.PolarClicked);
             // 
             // checkBox14
             // 
             this.checkBox14.AutoSize = true;
             this.checkBox14.Location = new System.Drawing.Point(6, 47);
             this.checkBox14.Name = "checkBox14";
-            this.checkBox14.Size = new System.Drawing.Size(100, 19);
+            this.checkBox14.Size = new System.Drawing.Size(97, 19);
             this.checkBox14.TabIndex = 1;
-            this.checkBox14.Text = "--min-filesize:";
+            this.checkBox14.Text = "--min-filesize";
             this.checkBox14.UseVisualStyleBackColor = true;
             // 
             // checkBox13
@@ -976,13 +997,15 @@
             this.checkBox13.AutoSize = true;
             this.checkBox13.Location = new System.Drawing.Point(6, 23);
             this.checkBox13.Name = "checkBox13";
-            this.checkBox13.Size = new System.Drawing.Size(110, 19);
+            this.checkBox13.Size = new System.Drawing.Size(107, 19);
             this.checkBox13.TabIndex = 0;
-            this.checkBox13.Text = "--playlist-items:";
+            this.checkBox13.Text = "--playlist-items";
             this.checkBox13.UseVisualStyleBackColor = true;
             // 
             // Page2
             // 
+            this.Page2.Controls.Add(this.NetworkGroupBox);
+            this.Page2.Controls.Add(this.GeorestrictionGroupBox);
             this.Page2.Location = new System.Drawing.Point(4, 24);
             this.Page2.Name = "Page2";
             this.Page2.Padding = new System.Windows.Forms.Padding(3);
@@ -998,23 +1021,21 @@
             this.testingbox.Size = new System.Drawing.Size(725, 23);
             this.testingbox.TabIndex = 17;
             // 
-            // Form1
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1705, 976);
+            this.ClientSize = new System.Drawing.Size(1197, 976);
             this.Controls.Add(this.testingbox);
             this.Controls.Add(this.MainTabControl);
-            this.Controls.Add(this.GeorestrictionGroupBox);
             this.Controls.Add(this.LinkBox);
-            this.Controls.Add(this.NetworkGroupBox);
             this.Controls.Add(this.DownloadButton);
             this.Controls.Add(this.LinkLabel);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Form1";
+            this.Name = "MainForm";
             this.Text = "yt-gui";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.GeneralGroupBox.ResumeLayout(false);
@@ -1027,6 +1048,7 @@
             this.Page1.ResumeLayout(false);
             this.VideoSelectionGroupBox.ResumeLayout(false);
             this.VideoSelectionGroupBox.PerformLayout();
+            this.Page2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1087,7 +1109,7 @@
         private CheckBox checkBox10;
         private TextBox textBox4;
         private CheckBox checkBox9;
-        private TextBox textBox3;
+        private TextBox GeoVerificationProxyTextbox;
         private CheckBox checkBox8;
         private TabControl MainTabControl;
         private TabPage Page1;
