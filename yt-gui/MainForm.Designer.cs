@@ -468,7 +468,6 @@
             this.ignoreerrorscheck.TabIndex = 16;
             this.ignoreerrorscheck.Text = "--ignore-errors";
             this.ignoreerrorscheck.UseVisualStyleBackColor = true;
-            this.ignoreerrorscheck.CheckedChanged += new System.EventHandler(this.PolarClicked);
             // 
             // Update
             // 

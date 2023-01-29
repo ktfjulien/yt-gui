@@ -10,12 +10,18 @@ namespace yt_gui
 
         CheckBox[] polars;
         CheckBox[] polars2;
+        List<CheckBox> generalspecial;
+        List<TextBox> generalspecial2;
+        List<CheckBox> videospecial;
+        List<TextBox> videospecial2;
+        List<CheckBox> networkspecial;
+        List<TextBox> networkspecial2;
+        List<CheckBox> geospecial;
+        List<TextBox> geospecial2;
 
         public MainForm()
         {
             InitializeComponent();
-
-
         }
 
         private String GenerateCommand()
@@ -23,28 +29,6 @@ namespace yt_gui
             string command = "yt-dlp.exe";
             command += " " + LinkBox.Text;
 
-            // Defining checkboxes that have textboxes next to them
-            // General Section
-            List<CheckBox> generalspecial = new List<CheckBox>() { DefaultSearchCheck, WaitForVideoCheck, CompatOptionsCheck, AliasCheck };
-
-            List<TextBox> generalspecial2 = new List<TextBox>() { DefaultSearchBox, WaitForVideoBox, CompatOptionsBox, AliasBox };
-
-            // Video Selection Section
-            List<CheckBox> videospecial = new List<CheckBox>() { checkBox13, checkBox14, checkBox23, checkBox19, checkBox31, checkBox29, checkBox25 };
-
-            List<TextBox> videospecial2 = new List<TextBox>() { textBox6, textBox7, textBox8, textBox9, textBox10, textBox11, textBox12 };
-
-            // Network Section
-            List<CheckBox> networkspecial = new List<CheckBox>() { ProxyCheck, SocketTimeoutCheck, SourceAddressIPCheck };
-
-            List<TextBox> networkspecial2 = new List<TextBox>() { ProxyTextBox, textBox1, textBox2 };
-
-            // Georestriction Section
-            List<CheckBox> geospecial = new List<CheckBox>() { checkBox8, checkBox9, checkBox10 };
-
-            List<TextBox> geospecial2 = new List<TextBox>() { GeoVerificationProxyTextbox, textBox4, textBox5 };
-
-            
             // Loop through all checkboxes in each Group Box. If the checkbox is checked, and it doesn't have a text box next to it, add the text to the command
             // If the checkbox has a text box attached, add the checkbox text + the contents of the textbox
 
@@ -101,15 +85,31 @@ namespace yt_gui
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            //disabling text boxes that are next to check boxes
-            //DefaultSearchBox.Enabled = DefaultSearchCheck.Checked;
-            //WaitForVideoBox.Enabled = WaitForVideoCheck.Checked;
-            //CompatOptionsBox.Enabled = CompatOptionsCheck.Checked;
-            //AliasBox.Enabled = AliasCheck.Checked;
 
-            polars = new CheckBox[] { NoAbortCheck, FlatPlaylistCheck, LiveFromStartCheck, WaitForVideoCheck, MarkWatchedCheck, checkBox19, checkBox17, checkBox31 , checkBox26 };
-            polars2 = new CheckBox[] { AbortCheck, NoFlatPlaylistCheck, NoLiveFromStartCheck, NoWaitForVideoCheck, NoMarkWatchedCheck, checkBox18, checkBox15, checkBox30 };
+            polars = new CheckBox[] { NoAbortCheck, FlatPlaylistCheck, LiveFromStartCheck, WaitForVideoCheck, MarkWatchedCheck, checkBox19, checkBox17, checkBox31, checkBox26 };
+            polars2 = new CheckBox[] { AbortCheck, NoFlatPlaylistCheck, NoLiveFromStartCheck, NoWaitForVideoCheck, NoMarkWatchedCheck, checkBox18, checkBox15, checkBox30, checkBox24 };
 
+
+            // Defining checkboxes that have textboxes next to them
+            // General Section
+            generalspecial = new List<CheckBox>() { DefaultSearchCheck, WaitForVideoCheck, CompatOptionsCheck, AliasCheck };
+
+            generalspecial2 = new List<TextBox>() { DefaultSearchBox, WaitForVideoBox, CompatOptionsBox, AliasBox };
+
+            // Video Selection Section
+            videospecial = new List<CheckBox>() { checkBox13, checkBox14, checkBox23, checkBox19, checkBox31, checkBox29, checkBox25 };
+
+            videospecial2 = new List<TextBox>() { textBox6, textBox7, textBox8, textBox9, textBox10, textBox11, textBox12 };
+
+            // Network Section
+            networkspecial = new List<CheckBox>() { ProxyCheck, SocketTimeoutCheck, SourceAddressIPCheck };
+
+            networkspecial2 = new List<TextBox>() { ProxyTextBox, textBox1, textBox2 };
+
+            // Georestriction Section
+            geospecial = new List<CheckBox>() { checkBox8, checkBox9, checkBox10 };
+
+            geospecial2 = new List<TextBox>() { GeoVerificationProxyTextbox, textBox4, textBox5 };
         }
 
         private void PolarClicked(object sender, EventArgs e)
