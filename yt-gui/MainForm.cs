@@ -110,6 +110,22 @@ namespace yt_gui
             geospecial = new List<CheckBox>() { checkBox8, checkBox9, checkBox10 };
 
             geospecial2 = new List<TextBox>() { GeoVerificationProxyTextbox, textBox4, textBox5 };
+
+
+            // Try to load the dependencies folder from settings file, if not present, highlight setup button
+
+            try
+            {
+                using (StreamReader sr = new StreamReader("settings.txt"))
+                {
+                    string dep = sr.ReadLine();
+
+                }
+            } catch
+            {
+                SetupButton.BackColor = Color.Red;
+            }
+            
         }
 
         private void PolarClicked(object sender, EventArgs e)
@@ -129,7 +145,27 @@ namespace yt_gui
             //cmd.Arguments = LinkBox.Text;
             //Process.Start(cmd);
 
-            testingbox.Text = GenerateCommand();
+            //testingbox.Text = GenerateCommand();
+
+            SaveDepPath();
+
+        }
+
+
+
+        private void SetupButton_Click(object sender, EventArgs e)
+        {
+            Form SetupForm = new SetupForm();
+            SetupForm.ShowDialog();
+        }
+
+        static void SaveDepPath(string path)
+        {
+            using (StreamWriter sw = new StreamWriter("settings.txt"))
+            {
+                sw.WriteLine("yoyoyoyo");
+                sw.Close();
+            }
         }
     }
 }
