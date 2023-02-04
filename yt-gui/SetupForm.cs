@@ -25,7 +25,16 @@ namespace yt_gui
             using (FolderBrowserDialog fbd = new FolderBrowserDialog())
             {
                 fbd.ShowDialog();
-                MainForm.SaveDepPath(fbd.SelectedPath);
+                SaveDepPath(fbd.SelectedPath);
+            }
+        }
+
+        static void SaveDepPath(string path)
+        {
+            using (StreamWriter sw = new StreamWriter("settings.txt"))
+            {
+                sw.WriteLine(path);
+                sw.Close();
             }
         }
 
@@ -37,6 +46,11 @@ namespace yt_gui
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Process.Start("explorer", "https://github.com/yt-dlp/yt-dlp#dependencies");
+        }
+
+        private void linkLabel1_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("explorer", "https://github.com/yt-dlp/yt-dlp/releases/tag/2023.01.06");
         }
     }
 }

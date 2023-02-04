@@ -147,7 +147,7 @@ namespace yt_gui
 
             //testingbox.Text = GenerateCommand();
 
-            SaveDepPath();
+            //SaveDepPath();
 
         }
 
