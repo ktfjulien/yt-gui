@@ -31,11 +31,14 @@ namespace yt_gui
 
         static void SaveDepPath(string path)
         {
-            using (StreamWriter sw = new StreamWriter("settings.txt"))
-            {
-                sw.WriteLine(path);
-                sw.Close();
-            }
+            Functions.WriteToSettings(0, path);
+
+            //using (StreamWriter sw = new StreamWriter("settings.txt"))
+            //{
+
+            //    sw.WriteLine(path);
+            //    sw.Close();
+            //}
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

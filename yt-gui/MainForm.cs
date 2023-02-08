@@ -111,22 +111,11 @@ namespace yt_gui
 
             geospecial2 = new List<TextBox>() { GeoVerificationProxyTextbox, textBox4, textBox5 };
 
-
-            // Try to load the dependencies folder from settings file, if not present, highlight setup button
-
-            try
-            {
-                using (StreamReader sr = new StreamReader("settings.txt"))
-                {
-                    string dep = sr.ReadLine();
-
-                }
-            } catch
-            {
-                SetupButton.BackColor = Color.Red;
-            }
+            Functions.LoadSettings();
             
         }
+
+        
 
         private void PolarClicked(object sender, EventArgs e)
         {
@@ -149,6 +138,14 @@ namespace yt_gui
 
             //SaveDepPath();
 
+            using (StreamReader sr = new StreamReader("settings.txt"))
+            {
+                string ytdlp = sr.ReadLine() + "\\yt-dlp.exe";
+                ProcessStartInfo cmd = new ProcessStartInfo(ytdlp);
+                cmd.Arguments = LinkBox.Text;
+                Process.Start(cmd);
+            }
+
         }
 
 
@@ -157,6 +154,7 @@ namespace yt_gui
         {
             Form SetupForm = new SetupForm();
             SetupForm.ShowDialog();
+            Functions.LoadSettings();
         }
 
         static void SaveDepPath(string path)
