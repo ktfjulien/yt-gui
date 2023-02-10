@@ -25,20 +25,9 @@ namespace yt_gui
             using (FolderBrowserDialog fbd = new FolderBrowserDialog())
             {
                 fbd.ShowDialog();
-                SaveDepPath(fbd.SelectedPath);
+                //SaveDepPath(fbd.SelectedPath);
+                Functions.WriteToSettings(0, fbd.SelectedPath);
             }
-        }
-
-        static void SaveDepPath(string path)
-        {
-            Functions.WriteToSettings(0, path);
-
-            //using (StreamWriter sw = new StreamWriter("settings.txt"))
-            //{
-
-            //    sw.WriteLine(path);
-            //    sw.Close();
-            //}
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

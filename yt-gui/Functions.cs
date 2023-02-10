@@ -10,9 +10,19 @@ namespace yt_gui
     {
         public static void WriteToSettings(int line, string text)
         {
-            string[] lines = File.ReadAllLines("settings.txt");
-            lines[line] = text;
-            File.WriteAllLines("settings.txt", lines);
+            if (File.Exists("settings.txt"))
+            {
+                string[] lines = File.ReadAllLines("settings.txt");
+                lines[line] = text;
+                File.WriteAllLines("settings.txt", lines);
+            } else
+            {
+                using (StreamWriter sw = new StreamWriter("settings.txt"))
+                {
+                    sw.WriteLine(text);
+                }
+            }
+            
         }
 
         // Try to load the dependencies folder from settings file, if not present, highlight setup button

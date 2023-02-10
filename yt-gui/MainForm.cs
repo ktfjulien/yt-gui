@@ -129,23 +129,14 @@ namespace yt_gui
 
         private void DownloadButton_Click(object sender, EventArgs e)
         {
-            //string ytdlp = @"C:\Users\Julien\Documents\GitHub\yt-gui\yt-gui\external stuff\yt-dlp.exe";
-            //ProcessStartInfo cmd = new ProcessStartInfo(ytdlp);
-            //cmd.Arguments = LinkBox.Text;
-            //Process.Start(cmd);
-
-            //testingbox.Text = GenerateCommand();
-
-            //SaveDepPath();
-
             using (StreamReader sr = new StreamReader("settings.txt"))
             {
+                testingbox.Text = GenerateCommand();
                 string ytdlp = sr.ReadLine() + "\\yt-dlp.exe";
                 ProcessStartInfo cmd = new ProcessStartInfo(ytdlp);
                 cmd.Arguments = LinkBox.Text;
                 Process.Start(cmd);
             }
-
         }
 
 
