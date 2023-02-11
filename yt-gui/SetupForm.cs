@@ -25,8 +25,7 @@ namespace yt_gui
             using (FolderBrowserDialog fbd = new FolderBrowserDialog())
             {
                 fbd.ShowDialog();
-                //SaveDepPath(fbd.SelectedPath);
-                Functions.WriteToSettings(0, fbd.SelectedPath);
+                MainForm.WriteToSettings(0, fbd.SelectedPath);
             }
         }
 

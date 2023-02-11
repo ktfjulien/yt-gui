@@ -24,7 +24,39 @@ namespace yt_gui
             InitializeComponent();
         }
 
-        private String GenerateCommand()
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
+            polars = new CheckBox[] { NoAbortCheck, FlatPlaylistCheck, LiveFromStartCheck, WaitForVideoCheck, MarkWatchedCheck, checkBox19, checkBox17, checkBox31, checkBox26 };
+            polars2 = new CheckBox[] { AbortCheck, NoFlatPlaylistCheck, NoLiveFromStartCheck, NoWaitForVideoCheck, NoMarkWatchedCheck, checkBox18, checkBox15, checkBox30, checkBox24 };
+
+
+            // Defining checkboxes that have textboxes next to them
+            // General Section
+            generalspecial = new List<CheckBox>() { DefaultSearchCheck, WaitForVideoCheck, CompatOptionsCheck, AliasCheck };
+
+            generalspecial2 = new List<TextBox>() { DefaultSearchBox, WaitForVideoBox, CompatOptionsBox, AliasBox };
+
+            // Video Selection Section
+            videospecial = new List<CheckBox>() { checkBox13, checkBox14, checkBox23, checkBox19, checkBox31, checkBox29, checkBox25 };
+
+            videospecial2 = new List<TextBox>() { textBox6, textBox7, textBox8, textBox9, textBox10, textBox11, textBox12 };
+
+            // Network Section
+            networkspecial = new List<CheckBox>() { ProxyCheck, SocketTimeoutCheck, SourceAddressIPCheck };
+
+            networkspecial2 = new List<TextBox>() { ProxyTextBox, textBox1, textBox2 };
+
+            // Georestriction Section
+            geospecial = new List<CheckBox>() { checkBox8, checkBox9, checkBox10 };
+
+            geospecial2 = new List<TextBox>() { GeoVerificationProxyTextbox, textBox4, textBox5 };
+
+            LoadSettings();
+
+        }
+
+        public String GenerateCommand()
         {
             string command = "yt-dlp.exe";
             command += " " + LinkBox.Text;
@@ -83,40 +115,6 @@ namespace yt_gui
             return command;
         }
 
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-
-            polars = new CheckBox[] { NoAbortCheck, FlatPlaylistCheck, LiveFromStartCheck, WaitForVideoCheck, MarkWatchedCheck, checkBox19, checkBox17, checkBox31, checkBox26 };
-            polars2 = new CheckBox[] { AbortCheck, NoFlatPlaylistCheck, NoLiveFromStartCheck, NoWaitForVideoCheck, NoMarkWatchedCheck, checkBox18, checkBox15, checkBox30, checkBox24 };
-
-
-            // Defining checkboxes that have textboxes next to them
-            // General Section
-            generalspecial = new List<CheckBox>() { DefaultSearchCheck, WaitForVideoCheck, CompatOptionsCheck, AliasCheck };
-
-            generalspecial2 = new List<TextBox>() { DefaultSearchBox, WaitForVideoBox, CompatOptionsBox, AliasBox };
-
-            // Video Selection Section
-            videospecial = new List<CheckBox>() { checkBox13, checkBox14, checkBox23, checkBox19, checkBox31, checkBox29, checkBox25 };
-
-            videospecial2 = new List<TextBox>() { textBox6, textBox7, textBox8, textBox9, textBox10, textBox11, textBox12 };
-
-            // Network Section
-            networkspecial = new List<CheckBox>() { ProxyCheck, SocketTimeoutCheck, SourceAddressIPCheck };
-
-            networkspecial2 = new List<TextBox>() { ProxyTextBox, textBox1, textBox2 };
-
-            // Georestriction Section
-            geospecial = new List<CheckBox>() { checkBox8, checkBox9, checkBox10 };
-
-            geospecial2 = new List<TextBox>() { GeoVerificationProxyTextbox, textBox4, textBox5 };
-
-            Functions.LoadSettings();
-            
-        }
-
-        
-
         private void PolarClicked(object sender, EventArgs e)
         {
             try {
@@ -124,7 +122,7 @@ namespace yt_gui
             } catch {
                 polars[Array.IndexOf(polars2, sender)].Checked = false;
             }
-            
+            UpdateCommand();
         }
 
         private void DownloadButton_Click(object sender, EventArgs e)
@@ -139,22 +137,12 @@ namespace yt_gui
             }
         }
 
-
-
         private void SetupButton_Click(object sender, EventArgs e)
         {
             Form SetupForm = new SetupForm();
             SetupForm.ShowDialog();
-            Functions.LoadSettings();
+            LoadSettings();
         }
 
-        static void SaveDepPath(string path)
-        {
-            using (StreamWriter sw = new StreamWriter("settings.txt"))
-            {
-                sw.WriteLine("yoyoyoyo");
-                sw.Close();
-            }
-        }
     }
 }

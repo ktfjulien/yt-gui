@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace yt_gui
 {
-    static class Functions
+    public partial class MainForm : Form
     {
         public static void WriteToSettings(int line, string text)
         {
@@ -15,7 +16,7 @@ namespace yt_gui
                 string[] lines = File.ReadAllLines("settings.txt");
                 lines[line] = text;
                 File.WriteAllLines("settings.txt", lines);
-            } else
+            } else if (!(String.IsNullOrEmpty(text)))
             {
                 using (StreamWriter sw = new StreamWriter("settings.txt"))
                 {
@@ -26,37 +27,30 @@ namespace yt_gui
         }
 
         // Try to load the dependencies folder from settings file, if not present, highlight setup button
-        public static void LoadSettings()
+        public void LoadSettings()
         {
-            Button temp = Application.OpenForms["MainForm"].Controls["SetupButton"] as Button;
             try
             {
                 using (StreamReader sr = new StreamReader("settings.txt"))
                 {
                     string dep = sr.ReadLine();
-                    temp.BackColor = Color.FromName("Control");
+                    SetupButton.BackColor = Color.FromName("Control");
                 }
             }
             catch
             {
-                temp.BackColor = Color.Red;
+                SetupButton.BackColor = Color.Red;
             }
         }
 
-        //private static void LoadSettings()
-        //{
-        //    try
-        //    {
-        //        using (StreamReader sr = new StreamReader("settings.txt"))
-        //        {
-        //            string dep = sr.ReadLine();
-        //            SetupButton.BackColor = Color.FromName("Control");
-        //        }
-        //    }
-        //    catch
-        //    {
-        //        SetupButton.BackColor = Color.Red;
-        //    }
-        //}
+        public void UpdateCommand()
+        {
+            testingbox.Text = GenerateCommand();
+        }
+
+        private void UpdateCommand(object sender, EventArgs e)
+        {
+            testingbox.Text = GenerateCommand();
+        }
     }
 }
