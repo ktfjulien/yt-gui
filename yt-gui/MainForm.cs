@@ -1,140 +1,149 @@
 using System.Collections;
+using System.Configuration;
 using System.Diagnostics;
 using System.Linq.Expressions;
 using System.Runtime.InteropServices;
+using Microsoft.Extensions.Configuration;
 
 namespace yt_gui
 {
     public partial class MainForm : Form
     {
 
-        CheckBox[] polars;
-        CheckBox[] polars2;
-        List<CheckBox> generalspecial;
-        List<TextBox> generalspecial2;
-        List<CheckBox> videospecial;
-        List<TextBox> videospecial2;
-        List<CheckBox> networkspecial;
-        List<TextBox> networkspecial2;
-        List<CheckBox> geospecial;
-        List<TextBox> geospecial2;
+        //CheckBox[] polars;
+        //CheckBox[] polars2;
+        Control[] ts;
+        //CheckBox[,] polars3;
+        //Control[] temp;
+        private IConfigurationRoot _configuration;
+        string dependencylocation;
+        private string[,] test = new string[10, 10];
+        Dictionary<string, string[]> p = new Dictionary<string, string[]>();
 
         public MainForm()
         {
             InitializeComponent();
+            ts = new Control[] { DefaultSearchCheck, DefaultSearchBox, WaitForVideoCheck, WaitForVideoBox, CompatOptionsCheck, CompatOptionsBox, AliasCheck, AliasBox,
+            PlaylistItemsCheck, PlaylistItemsBox, MinFileSizeCheck, MinFileSizeBox, MaxFileSizeCheck, MaxFileSizeBox, MatchFiltersCheck, MatchFiltersBox, DownloadArchiveCheck, DownloadArchiveBox, MaxDownloadsCheck, MaxDownloadsBox, SkipPlaylistAfterErrorsCheck, SkipPlaylistAfterErrorsBox,
+            ProxyCheck, ProxyTextBox, SocketTimeoutCheck, SocketTimeoutBox, SourceAddressIPCheck, SourceAddressBox, GeoVerificationProxyTextCheck, GeoVerificationProxyBox, GeoBypassCountryCheck, GeoBypassCountryBox,
+            GeoBypassIPBlockCheck, GeoBypassIPBlockBox};
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            //OLD CODE FOR PUTTINGS PRESETS IN 2 DIMENSIONAL ARRAY
+            // Initialize the configuration by reading the JSON file
+            //var builder = new ConfigurationBuilder()
+            //    .AddJsonFile("config.json", optional: true, reloadOnChange: true);
+            //_configuration = builder.Build();
+            //IConfigurationSection presets = _configuration.GetSection("Presets");
+            //var presetsSection = _configuration.GetSection("Presets");
 
-            polars = new CheckBox[] { NoAbortCheck, FlatPlaylistCheck, LiveFromStartCheck, WaitForVideoCheck, MarkWatchedCheck, checkBox19, checkBox17, checkBox31, checkBox26 };
-            polars2 = new CheckBox[] { AbortCheck, NoFlatPlaylistCheck, NoLiveFromStartCheck, NoWaitForVideoCheck, NoMarkWatchedCheck, checkBox18, checkBox15, checkBox30, checkBox24 };
+            //if (presetsSection != null)
+            //{
+            //    int i = 0;
+
+            //    foreach (var preset in presetsSection.GetChildren())
+            //    {
+            //        // Get the key of the JSON array
+            //        string key = preset.Key;
+
+            //        // Place the key in the first dimension of 'test'
+            //        test[i, 0] = key;
+
+            //        // Get the contents of the JSON array
+            //        var presetArray = preset.GetChildren();
+
+            //        int j = 1;
+
+            //        // Place the contents in the second dimension of 'test'
+            //        foreach (var value in presetArray)
+            //        {
+            //            test[i, j++] = value.Value;
+            //        }
+
+            //        i++;
+            //    }
+
+            //NEW CODE FOR PUTTING PRESETS IN DICTIONARY
+            var builder = new ConfigurationBuilder()
+                .AddJsonFile("config.json", optional: true, reloadOnChange: true);
+            _configuration = builder.Build();
+            var presetsSection = _configuration.GetSection("Presets");
+
+            if (presetsSection != null)
+            {
+                foreach (var preset in presetsSection.GetChildren())
+                {
+                    string[] tempvals = { };
+
+                    // Get the key of the JSON array
+                    string key = preset.GetChildren().First().Value;
+
+                    // Get the contents of the JSON array
+                    var presetArray = preset.GetChildren();
+
+                    // Place the contents in the second dimension of 'test'
+                    foreach (var value in presetArray)
+                    {
+                        tempvals.Append(value.Value);
+                        string t = "";
+
+                    }
+                    p.Add(key, tempvals);
+                }
+            }
 
 
-            // Defining checkboxes that have textboxes next to them
-            // General Section
-            generalspecial = new List<CheckBox>() { DefaultSearchCheck, WaitForVideoCheck, CompatOptionsCheck, AliasCheck };
-
-            generalspecial2 = new List<TextBox>() { DefaultSearchBox, WaitForVideoBox, CompatOptionsBox, AliasBox };
-
-            // Video Selection Section
-            videospecial = new List<CheckBox>() { checkBox13, checkBox14, checkBox23, checkBox19, checkBox31, checkBox29, checkBox25 };
-
-            videospecial2 = new List<TextBox>() { textBox6, textBox7, textBox8, textBox9, textBox10, textBox11, textBox12 };
-
-            // Network Section
-            networkspecial = new List<CheckBox>() { ProxyCheck, SocketTimeoutCheck, SourceAddressIPCheck };
-
-            networkspecial2 = new List<TextBox>() { ProxyTextBox, textBox1, textBox2 };
-
-            // Georestriction Section
-            geospecial = new List<CheckBox>() { checkBox8, checkBox9, checkBox10 };
-
-            geospecial2 = new List<TextBox>() { GeoVerificationProxyTextbox, textBox4, textBox5 };
-
-            LoadSettings();
+                //LoadSettings();
+                ReadOrCreateConfig();
 
         }
+
+
+        
+        
+
 
         public String GenerateCommand()
         {
             string command = "yt-dlp.exe";
             command += " " + LinkBox.Text;
 
-            // Loop through all checkboxes in each Group Box. If the checkbox is checked, and it doesn't have a text box next to it, add the text to the command
-            // If the checkbox has a text box attached, add the checkbox text + the contents of the textbox
-
-            foreach (CheckBox y in GeneralGroupBox.Controls.OfType<CheckBox>() )
+            foreach (TabPage t in MainTabControl.Controls.OfType<TabPage>())
             {
-                if (!(generalspecial.Contains(y)))
+                foreach (GroupBox g in t.Controls.OfType<GroupBox>())
                 {
-                    if (y.Checked) { command += " " + y.Text; };
-                } else
-                {
-                    if (y.Checked) { command += " " + y.Text + " " + generalspecial2[generalspecial.IndexOf(y)].Text; };
+                    foreach (CheckBox c in g.Controls.OfType<CheckBox>())
+                    {
+                        if (ts.Contains(c))
+                        {
+                            if (c.Checked)
+                            {
+                                command += " " + c.Text + " " + ts[Array.IndexOf(ts, c) + 1].Text;
+                            }
+                        }
+                    }
                 }
-                
-            }
 
-            foreach (CheckBox y in VideoSelectionGroupBox.Controls.OfType<CheckBox>())
-            {
-                if (!(videospecial.Contains(y)))
-                {
-                    if (y.Checked) { command += " " + y.Text; };
-                }
-                else
-                {
-                    if (y.Checked) { command += " " + y.Text + " " + videospecial2[videospecial.IndexOf(y)].Text; };
-                }
-            }
-
-            foreach (CheckBox y in NetworkGroupBox.Controls.OfType<CheckBox>())
-            {
-                if (!(networkspecial.Contains(y)))
-                {
-                    if (y.Checked) { command += " " + y.Text; };
-                }
-                else
-                {
-                    if (y.Checked) { command += " " + y.Text + " " + networkspecial2[networkspecial.IndexOf(y)].Text; };
-                }
-            }
-
-            foreach (CheckBox y in GeorestrictionGroupBox.Controls.OfType<CheckBox>())
-            {
-                if (!(geospecial.Contains(y)))
-                {
-                    if (y.Checked) { command += " " + y.Text; };
-                }
-                else
-                {
-                    if (y.Checked) { command += " " + y.Text + " " + geospecial2[geospecial.IndexOf(y)].Text; };
-                }
             }
 
             return command;
         }
 
-        private void PolarClicked(object sender, EventArgs e)
+        private void SpecialClicked(object sender, EventArgs e)
         {
-            try {
-                polars2[Array.IndexOf(polars, sender)].Checked = false;
-            } catch {
-                polars[Array.IndexOf(polars2, sender)].Checked = false;
-            }
-            UpdateCommand();
+
+            ts[Array.IndexOf(ts, sender) + 1].Enabled ^= true;
+            UpdateCommand(sender, e);
         }
 
         private void DownloadButton_Click(object sender, EventArgs e)
         {
-            using (StreamReader sr = new StreamReader("settings.txt"))
-            {
-                testingbox.Text = GenerateCommand();
-                string ytdlp = sr.ReadLine() + "\\yt-dlp.exe";
-                ProcessStartInfo cmd = new ProcessStartInfo(ytdlp);
-                cmd.Arguments = LinkBox.Text;
-                Process.Start(cmd);
-            }
+            string ytdlp = "C:\\Users\\Julien\\Music\\app\\yt-dlp.exe";
+            ProcessStartInfo cmd = new ProcessStartInfo(ytdlp);
+            cmd.Arguments = LinkBox.Text;
+            Process.Start(cmd);
         }
 
         private void SetupButton_Click(object sender, EventArgs e)
@@ -144,5 +153,14 @@ namespace yt_gui
             LoadSettings();
         }
 
+        private void LinkBox_TextChanged(object sender, EventArgs e)
+        {
+            testingbox.Text = GenerateCommand();
+        }
+
+        private void CopyButton_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(testingbox.Text);
+        }
     }
 }

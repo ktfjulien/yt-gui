@@ -1,0 +1,22 @@
+On load, look for config file somewhere
+If not found, create blank from template
+
+Setup dependencies and yt-dlp button pressed
+Open save dialog, grab dep location
+write to config file, first line
+
+Save Preset button pressed
+Ask for preset name
+open config file
+addend new preset
+Loop through every check box in maintabcontrol
+if checked: add label to preset
+if attached to textbox (control is in ts), addend ": text"
+
+Load Preset button pressed
+Reset all controls in maintabcontrol
+Look in config file for preset name
+foreach control in maintabcontrol
+foreach control in preset file
+if match, check
+if attached to textbox (control is in ts), addend ": text"

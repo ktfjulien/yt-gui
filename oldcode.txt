@@ -1,0 +1,123 @@
+//private void SpecialClicked(object sender, EventArgs e)
+        //{
+        //    if (ts.Contains(sender))
+        //    {
+        //        ts[Array.IndexOf(temp, sender) + 1].Enabled ^= true;
+        //        polars3[Array.IndexOf(polars3, sender), 0].Checked ^= true;
+        //        return;
+        //    } else
+        //    {
+        //        polars3[Array.IndexOf(polars3, sender), 0].Enabled ^= true;
+        //        Array.Find
+        //    }
+        //}
+
+
+
+        private void DownloadButton_Click(object sender, EventArgs e)
+        {
+            //using (StreamReader sr = new StreamReader("settings.txt"))
+            //{
+            //    testingbox.Text = GenerateCommand();
+            //    string ytdlp = sr.ReadLine() + "C:\\Users\\Julien\\Music\\app\\yt-dlp.exe";
+            //    ProcessStartInfo cmd = new ProcessStartInfo(ytdlp);
+            //    cmd.Arguments = LinkBox.Text;
+            //    Process.Start(cmd);
+            //}
+            string ytdlp = "C:\\Users\\Julien\\Music\\app\\yt-dlp.exe";
+            ProcessStartInfo cmd = new ProcessStartInfo(ytdlp);
+            cmd.Arguments = LinkBox.Text;
+            Process.Start(cmd);
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
+            //polars = new CheckBox[] { NoAbortCheck, FlatPlaylistCheck, LiveFromStartCheck, WaitForVideoCheck, MarkWatchedCheck, MatchFiltersCheck, NoPlaylistCheck, DownloadArchiveCheck, BreakPerInputCheck };
+            //polars2 = new CheckBox[] { AbortCheck, NoFlatPlaylistCheck, NoLiveFromStartCheck, NoWaitForVideoCheck, NoMarkWatchedCheck, NoMatchFiltersCheck, YesPlaylistCheck, NoDownloadArchiveCheck, NoBreakPerInputCheck };
+
+
+            ts = new Control[] { DefaultSearchCheck, DefaultSearchBox, WaitForVideoCheck, WaitForVideoBox, CompatOptionsCheck, CompatOptionsBox, AliasCheck, AliasBox,
+            PlaylistItemsCheck, PlaylistItemsBox, MinFileSizeCheck, MinFileSizeBox, MaxFileSizeCheck, MaxFileSizeBox, MatchFiltersCheck, MatchFiltersBox, DownloadArchiveCheck, DownloadArchiveBox, MaxDownloadsCheck, MaxDownloadsBox, SkipPlaylistAfterErrorsCheck, SkipPlaylistAfterErrorsBox,
+            ProxyCheck, ProxyTextBox, SocketTimeoutCheck, SocketTimeoutBox, SourceAddressIPCheck, SourceAddressBox, GeoVerificationProxyTextCheck, GeoVerificationProxyBox, GeoBypassCountryCheck, GeoBypassCountryBox,
+            GeoBypassIPBlockCheck, GeoBypassIPBlockBox};
+
+            //polars3 = new CheckBox[,] { {NoAbortCheck, AbortCheck}, { FlatPlaylistCheck, NoFlatPlaylistCheck }, { LiveFromStartCheck, NoLiveFromStartCheck },
+            //    {WaitForVideoCheck ,NoWaitForVideoCheck }, {MarkWatchedCheck ,NoMarkWatchedCheck }, {MatchFiltersCheck ,NoMatchFiltersCheck }, {NoPlaylistCheck ,YesPlaylistCheck },
+            //    {DownloadArchiveCheck ,NoDownloadArchiveCheck }, {BreakPerInputCheck ,NoBreakPerInputCheck } };
+
+            //temp = new Control[] { };
+
+            LoadSettings();
+
+        }
+
+
+        //public String GenerateCommand()
+        //{
+        //    string command = "yt-dlp.exe";
+        //    command += " " + LinkBox.Text;
+        //    foreach (CheckBox y in GeneralGroupBox.Controls.OfType<CheckBox>())
+        //    {
+        //        if (ts.Contains(y))
+        //        {
+        //            if (y.Checked)
+        //            {
+        //                command += " " + y.Text + " " + ts[Array.IndexOf(ts, y) + 1].Text;
+        //            }
+        //        }
+        //    }
+
+
+        //    return command;
+        //}
+
+        //private void SpecialClicked(object sender, EventArgs e)
+        //{
+        //    try
+        //    {
+        //        try
+        //        {
+        //            polars2[Array.IndexOf(polars, sender)].Checked = false;
+        //        }
+        //        catch
+        //        {
+        //            polars[Array.IndexOf(polars2, sender)].Checked = false;
+        //        }
+        //    }
+        //    catch
+        //    {
+
+        //    }
+
+        //    ts[Array.IndexOf(ts, sender) + 1].Enabled ^= true;
+        //    ts[Array.IndexOf(ts, sender) + 1].Text = "";
+
+        //    UpdateCommand(sender, e);
+        //}
+
+        //private void SpecialClicked(object sender, EventArgs e)
+        //{
+        //    try
+        //    {
+        //        try
+        //        {
+        //            polars2[Array.IndexOf(polars, sender)].Checked = false;
+        //            return;
+        //        }
+        //        catch
+        //        {
+        //            polars[Array.IndexOf(polars2, sender)].Checked = false;
+        //            return;
+        //        }
+        //    }
+        //    catch
+        //    {
+
+        //    }
+        //    ts[Array.IndexOf(ts, sender) + 1].Enabled ^= true;
+        //    ts[Array.IndexOf(ts, sender) + 1].Text = "";
+
+
+        //    UpdateCommand(sender, e);
+        //}

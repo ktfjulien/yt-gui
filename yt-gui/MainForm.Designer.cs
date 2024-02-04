@@ -28,1005 +28,1084 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.LinkLabel = new System.Windows.Forms.Label();
-            this.DownloadButton = new System.Windows.Forms.Button();
-            this.LinkBox = new System.Windows.Forms.TextBox();
-            this.GeneralGroupBox = new System.Windows.Forms.GroupBox();
-            this.AliasBox = new System.Windows.Forms.TextBox();
-            this.AliasCheck = new System.Windows.Forms.CheckBox();
-            this.CompatOptionsBox = new System.Windows.Forms.TextBox();
-            this.CompatOptionsCheck = new System.Windows.Forms.CheckBox();
-            this.checkBox16 = new System.Windows.Forms.CheckBox();
-            this.NoMarkWatchedCheck = new System.Windows.Forms.CheckBox();
-            this.MarkWatchedCheck = new System.Windows.Forms.CheckBox();
-            this.NoWaitForVideoCheck = new System.Windows.Forms.CheckBox();
-            this.WaitForVideoBox = new System.Windows.Forms.TextBox();
-            this.WaitForVideoCheck = new System.Windows.Forms.CheckBox();
-            this.NoLiveFromStartCheck = new System.Windows.Forms.CheckBox();
-            this.LiveFromStartCheck = new System.Windows.Forms.CheckBox();
-            this.NoFlatPlaylistCheck = new System.Windows.Forms.CheckBox();
-            this.FlatPlaylistCheck = new System.Windows.Forms.CheckBox();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.DefaultSearchBox = new System.Windows.Forms.TextBox();
-            this.DefaultSearchCheck = new System.Windows.Forms.CheckBox();
-            this.forcegenericextractorcheck = new System.Windows.Forms.CheckBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.AbortCheck = new System.Windows.Forms.CheckBox();
-            this.NoAbortCheck = new System.Windows.Forms.CheckBox();
-            this.ignoreerrorscheck = new System.Windows.Forms.CheckBox();
-            this.Update = new System.Windows.Forms.Button();
-            this.VersionButton = new System.Windows.Forms.Button();
-            this.HelpButton = new System.Windows.Forms.Button();
-            this.NetworkGroupBox = new System.Windows.Forms.GroupBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.SourceAddressIPCheck = new System.Windows.Forms.CheckBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.SocketTimeoutCheck = new System.Windows.Forms.CheckBox();
-            this.ProxyTextBox = new System.Windows.Forms.TextBox();
-            this.ProxyCheck = new System.Windows.Forms.CheckBox();
-            this.GeorestrictionGroupBox = new System.Windows.Forms.GroupBox();
-            this.checkBox12 = new System.Windows.Forms.CheckBox();
-            this.checkBox11 = new System.Windows.Forms.CheckBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.checkBox10 = new System.Windows.Forms.CheckBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.checkBox9 = new System.Windows.Forms.CheckBox();
-            this.GeoVerificationProxyTextbox = new System.Windows.Forms.TextBox();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
-            this.MainTabControl = new System.Windows.Forms.TabControl();
-            this.Page1 = new System.Windows.Forms.TabPage();
-            this.VideoSelectionGroupBox = new System.Windows.Forms.GroupBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.checkBox32 = new System.Windows.Forms.CheckBox();
-            this.checkBox31 = new System.Windows.Forms.CheckBox();
-            this.checkBox30 = new System.Windows.Forms.CheckBox();
-            this.checkBox29 = new System.Windows.Forms.CheckBox();
-            this.checkBox28 = new System.Windows.Forms.CheckBox();
-            this.checkBox27 = new System.Windows.Forms.CheckBox();
-            this.checkBox26 = new System.Windows.Forms.CheckBox();
-            this.checkBox25 = new System.Windows.Forms.CheckBox();
-            this.checkBox24 = new System.Windows.Forms.CheckBox();
-            this.checkBox23 = new System.Windows.Forms.CheckBox();
-            this.checkBox22 = new System.Windows.Forms.CheckBox();
-            this.checkBox21 = new System.Windows.Forms.CheckBox();
-            this.checkBox20 = new System.Windows.Forms.CheckBox();
-            this.checkBox19 = new System.Windows.Forms.CheckBox();
-            this.checkBox18 = new System.Windows.Forms.CheckBox();
-            this.checkBox17 = new System.Windows.Forms.CheckBox();
-            this.checkBox15 = new System.Windows.Forms.CheckBox();
-            this.checkBox14 = new System.Windows.Forms.CheckBox();
-            this.checkBox13 = new System.Windows.Forms.CheckBox();
-            this.Page2 = new System.Windows.Forms.TabPage();
-            this.testingbox = new System.Windows.Forms.TextBox();
-            this.SetupButton = new System.Windows.Forms.Button();
-            this.GeneralGroupBox.SuspendLayout();
-            this.NetworkGroupBox.SuspendLayout();
-            this.GeorestrictionGroupBox.SuspendLayout();
-            this.MainTabControl.SuspendLayout();
-            this.Page1.SuspendLayout();
-            this.VideoSelectionGroupBox.SuspendLayout();
-            this.Page2.SuspendLayout();
-            this.SuspendLayout();
+            LinkLabel = new Label();
+            DownloadButton = new Button();
+            LinkBox = new TextBox();
+            GeneralGroupBox = new GroupBox();
+            AliasBox = new TextBox();
+            AliasCheck = new CheckBox();
+            CompatOptionsBox = new TextBox();
+            CompatOptionsCheck = new CheckBox();
+            NoColorsCheck = new CheckBox();
+            NoMarkWatchedCheck = new CheckBox();
+            MarkWatchedCheck = new CheckBox();
+            NoWaitForVideoCheck = new CheckBox();
+            WaitForVideoBox = new TextBox();
+            WaitForVideoCheck = new CheckBox();
+            NoLiveFromStartCheck = new CheckBox();
+            LiveFromStartCheck = new CheckBox();
+            NoFlatPlaylistCheck = new CheckBox();
+            FlatPlaylistCheck = new CheckBox();
+            checkBox7 = new CheckBox();
+            checkBox6 = new CheckBox();
+            DefaultSearchBox = new TextBox();
+            DefaultSearchCheck = new CheckBox();
+            forcegenericextractorcheck = new CheckBox();
+            button3 = new Button();
+            button2 = new Button();
+            button1 = new Button();
+            AbortCheck = new CheckBox();
+            NoAbortCheck = new CheckBox();
+            ignoreerrorscheck = new CheckBox();
+            Update = new Button();
+            VersionButton = new Button();
+            HelpButton = new Button();
+            NetworkGroupBox = new GroupBox();
+            checkBox5 = new CheckBox();
+            checkBox3 = new CheckBox();
+            checkBox2 = new CheckBox();
+            SourceAddressBox = new TextBox();
+            SourceAddressIPCheck = new CheckBox();
+            SocketTimeoutBox = new TextBox();
+            SocketTimeoutCheck = new CheckBox();
+            ProxyTextBox = new TextBox();
+            ProxyCheck = new CheckBox();
+            GeorestrictionGroupBox = new GroupBox();
+            checkBox12 = new CheckBox();
+            checkBox11 = new CheckBox();
+            GeoBypassIPBlockBox = new TextBox();
+            GeoBypassIPBlockCheck = new CheckBox();
+            GeoBypassCountryBox = new TextBox();
+            GeoBypassCountryCheck = new CheckBox();
+            GeoVerificationProxyBox = new TextBox();
+            GeoVerificationProxyTextCheck = new CheckBox();
+            MainTabControl = new TabControl();
+            Page1 = new TabPage();
+            VideoSelectionGroupBox = new GroupBox();
+            SkipPlaylistAfterErrorsBox = new TextBox();
+            MaxDownloadsBox = new TextBox();
+            DownloadArchiveBox = new TextBox();
+            MatchFiltersBox = new TextBox();
+            MaxFileSizeBox = new TextBox();
+            MinFileSizeBox = new TextBox();
+            PlaylistItemsBox = new TextBox();
+            AgeLimitCheck = new CheckBox();
+            DownloadArchiveCheck = new CheckBox();
+            NoDownloadArchiveCheck = new CheckBox();
+            MaxDownloadsCheck = new CheckBox();
+            BreakOnExistingCheck = new CheckBox();
+            BreakOnRejectCheck = new CheckBox();
+            BreakPerInputCheck = new CheckBox();
+            SkipPlaylistAfterErrorsCheck = new CheckBox();
+            NoBreakPerInputCheck = new CheckBox();
+            MaxFileSizeCheck = new CheckBox();
+            DateCheck = new CheckBox();
+            DateBeforeCheck = new CheckBox();
+            DateAfterCheck = new CheckBox();
+            MatchFiltersCheck = new CheckBox();
+            NoMatchFiltersCheck = new CheckBox();
+            NoPlaylistCheck = new CheckBox();
+            YesPlaylistCheck = new CheckBox();
+            MinFileSizeCheck = new CheckBox();
+            PlaylistItemsCheck = new CheckBox();
+            Page2 = new TabPage();
+            DownloadGroupBox = new GroupBox();
+            testingbox = new TextBox();
+            SetupButton = new Button();
+            CopyButton = new Button();
+            PresetsListBox = new ListBox();
+            PresetsLabel = new Label();
+            SavePreset = new Button();
+            DeletePreset = new Button();
+            GeneralGroupBox.SuspendLayout();
+            NetworkGroupBox.SuspendLayout();
+            GeorestrictionGroupBox.SuspendLayout();
+            MainTabControl.SuspendLayout();
+            Page1.SuspendLayout();
+            VideoSelectionGroupBox.SuspendLayout();
+            Page2.SuspendLayout();
+            SuspendLayout();
             // 
             // LinkLabel
             // 
-            this.LinkLabel.AutoSize = true;
-            this.LinkLabel.Location = new System.Drawing.Point(23, 15);
-            this.LinkLabel.Name = "LinkLabel";
-            this.LinkLabel.Size = new System.Drawing.Size(32, 15);
-            this.LinkLabel.TabIndex = 0;
-            this.LinkLabel.Text = "Link:";
+            LinkLabel.AutoSize = true;
+            LinkLabel.Location = new Point(23, 15);
+            LinkLabel.Name = "LinkLabel";
+            LinkLabel.Size = new Size(32, 15);
+            LinkLabel.TabIndex = 0;
+            LinkLabel.Text = "Link:";
             // 
             // DownloadButton
             // 
-            this.DownloadButton.Location = new System.Drawing.Point(427, 750);
-            this.DownloadButton.Name = "DownloadButton";
-            this.DownloadButton.Size = new System.Drawing.Size(90, 23);
-            this.DownloadButton.TabIndex = 2;
-            this.DownloadButton.Text = "Download";
-            this.DownloadButton.UseVisualStyleBackColor = true;
-            this.DownloadButton.Click += new System.EventHandler(this.DownloadButton_Click);
+            DownloadButton.Location = new Point(427, 750);
+            DownloadButton.Name = "DownloadButton";
+            DownloadButton.Size = new Size(90, 23);
+            DownloadButton.TabIndex = 2;
+            DownloadButton.Text = "Download";
+            DownloadButton.UseVisualStyleBackColor = true;
+            DownloadButton.Click += DownloadButton_Click;
             // 
             // LinkBox
             // 
-            this.LinkBox.Location = new System.Drawing.Point(61, 12);
-            this.LinkBox.Name = "LinkBox";
-            this.LinkBox.Size = new System.Drawing.Size(740, 23);
-            this.LinkBox.TabIndex = 3;
+            LinkBox.Location = new Point(61, 12);
+            LinkBox.Name = "LinkBox";
+            LinkBox.Size = new Size(740, 23);
+            LinkBox.TabIndex = 3;
+            LinkBox.TextChanged += LinkBox_TextChanged;
             // 
             // GeneralGroupBox
             // 
-            this.GeneralGroupBox.BackColor = System.Drawing.SystemColors.Control;
-            this.GeneralGroupBox.Controls.Add(this.AliasBox);
-            this.GeneralGroupBox.Controls.Add(this.AliasCheck);
-            this.GeneralGroupBox.Controls.Add(this.CompatOptionsBox);
-            this.GeneralGroupBox.Controls.Add(this.CompatOptionsCheck);
-            this.GeneralGroupBox.Controls.Add(this.checkBox16);
-            this.GeneralGroupBox.Controls.Add(this.NoMarkWatchedCheck);
-            this.GeneralGroupBox.Controls.Add(this.MarkWatchedCheck);
-            this.GeneralGroupBox.Controls.Add(this.NoWaitForVideoCheck);
-            this.GeneralGroupBox.Controls.Add(this.WaitForVideoBox);
-            this.GeneralGroupBox.Controls.Add(this.WaitForVideoCheck);
-            this.GeneralGroupBox.Controls.Add(this.NoLiveFromStartCheck);
-            this.GeneralGroupBox.Controls.Add(this.LiveFromStartCheck);
-            this.GeneralGroupBox.Controls.Add(this.NoFlatPlaylistCheck);
-            this.GeneralGroupBox.Controls.Add(this.FlatPlaylistCheck);
-            this.GeneralGroupBox.Controls.Add(this.checkBox7);
-            this.GeneralGroupBox.Controls.Add(this.checkBox6);
-            this.GeneralGroupBox.Controls.Add(this.DefaultSearchBox);
-            this.GeneralGroupBox.Controls.Add(this.DefaultSearchCheck);
-            this.GeneralGroupBox.Controls.Add(this.forcegenericextractorcheck);
-            this.GeneralGroupBox.Controls.Add(this.button3);
-            this.GeneralGroupBox.Controls.Add(this.button2);
-            this.GeneralGroupBox.Controls.Add(this.button1);
-            this.GeneralGroupBox.Controls.Add(this.AbortCheck);
-            this.GeneralGroupBox.Controls.Add(this.NoAbortCheck);
-            this.GeneralGroupBox.Controls.Add(this.ignoreerrorscheck);
-            this.GeneralGroupBox.Controls.Add(this.Update);
-            this.GeneralGroupBox.Controls.Add(this.VersionButton);
-            this.GeneralGroupBox.Controls.Add(this.HelpButton);
-            this.GeneralGroupBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.GeneralGroupBox.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.GeneralGroupBox.Location = new System.Drawing.Point(6, 6);
-            this.GeneralGroupBox.Name = "GeneralGroupBox";
-            this.GeneralGroupBox.Size = new System.Drawing.Size(386, 663);
-            this.GeneralGroupBox.TabIndex = 12;
-            this.GeneralGroupBox.TabStop = false;
-            this.GeneralGroupBox.Text = "General";
+            GeneralGroupBox.BackColor = SystemColors.Control;
+            GeneralGroupBox.Controls.Add(AliasBox);
+            GeneralGroupBox.Controls.Add(AliasCheck);
+            GeneralGroupBox.Controls.Add(CompatOptionsBox);
+            GeneralGroupBox.Controls.Add(CompatOptionsCheck);
+            GeneralGroupBox.Controls.Add(NoColorsCheck);
+            GeneralGroupBox.Controls.Add(NoMarkWatchedCheck);
+            GeneralGroupBox.Controls.Add(MarkWatchedCheck);
+            GeneralGroupBox.Controls.Add(NoWaitForVideoCheck);
+            GeneralGroupBox.Controls.Add(WaitForVideoBox);
+            GeneralGroupBox.Controls.Add(WaitForVideoCheck);
+            GeneralGroupBox.Controls.Add(NoLiveFromStartCheck);
+            GeneralGroupBox.Controls.Add(LiveFromStartCheck);
+            GeneralGroupBox.Controls.Add(NoFlatPlaylistCheck);
+            GeneralGroupBox.Controls.Add(FlatPlaylistCheck);
+            GeneralGroupBox.Controls.Add(checkBox7);
+            GeneralGroupBox.Controls.Add(checkBox6);
+            GeneralGroupBox.Controls.Add(DefaultSearchBox);
+            GeneralGroupBox.Controls.Add(DefaultSearchCheck);
+            GeneralGroupBox.Controls.Add(forcegenericextractorcheck);
+            GeneralGroupBox.Controls.Add(button3);
+            GeneralGroupBox.Controls.Add(button2);
+            GeneralGroupBox.Controls.Add(button1);
+            GeneralGroupBox.Controls.Add(AbortCheck);
+            GeneralGroupBox.Controls.Add(NoAbortCheck);
+            GeneralGroupBox.Controls.Add(ignoreerrorscheck);
+            GeneralGroupBox.Controls.Add(Update);
+            GeneralGroupBox.Controls.Add(VersionButton);
+            GeneralGroupBox.Controls.Add(HelpButton);
+            GeneralGroupBox.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            GeneralGroupBox.ForeColor = SystemColors.ControlText;
+            GeneralGroupBox.Location = new Point(6, 6);
+            GeneralGroupBox.Name = "GeneralGroupBox";
+            GeneralGroupBox.Size = new Size(386, 663);
+            GeneralGroupBox.TabIndex = 12;
+            GeneralGroupBox.TabStop = false;
+            GeneralGroupBox.Text = "General";
             // 
             // AliasBox
             // 
-            this.AliasBox.Enabled = false;
-            this.AliasBox.Location = new System.Drawing.Point(76, 617);
-            this.AliasBox.Name = "AliasBox";
-            this.AliasBox.Size = new System.Drawing.Size(241, 23);
-            this.AliasBox.TabIndex = 40;
+            AliasBox.Enabled = false;
+            AliasBox.Location = new Point(76, 617);
+            AliasBox.Name = "AliasBox";
+            AliasBox.Size = new Size(241, 23);
+            AliasBox.TabIndex = 40;
+            AliasBox.TextChanged += UpdateCommand;
             // 
             // AliasCheck
             // 
-            this.AliasCheck.AutoSize = true;
-            this.AliasCheck.Location = new System.Drawing.Point(8, 621);
-            this.AliasCheck.Name = "AliasCheck";
-            this.AliasCheck.Size = new System.Drawing.Size(59, 19);
-            this.AliasCheck.TabIndex = 39;
-            this.AliasCheck.Text = "--alias";
-            this.AliasCheck.UseVisualStyleBackColor = true;
+            AliasCheck.AutoSize = true;
+            AliasCheck.Location = new Point(8, 621);
+            AliasCheck.Name = "AliasCheck";
+            AliasCheck.Size = new Size(59, 19);
+            AliasCheck.TabIndex = 39;
+            AliasCheck.Text = "--alias";
+            AliasCheck.UseVisualStyleBackColor = true;
+            AliasCheck.Click += SpecialClicked;
             // 
             // CompatOptionsBox
             // 
-            this.CompatOptionsBox.Enabled = false;
-            this.CompatOptionsBox.Location = new System.Drawing.Point(139, 592);
-            this.CompatOptionsBox.Name = "CompatOptionsBox";
-            this.CompatOptionsBox.Size = new System.Drawing.Size(241, 23);
-            this.CompatOptionsBox.TabIndex = 38;
+            CompatOptionsBox.Enabled = false;
+            CompatOptionsBox.Location = new Point(139, 592);
+            CompatOptionsBox.Name = "CompatOptionsBox";
+            CompatOptionsBox.Size = new Size(241, 23);
+            CompatOptionsBox.TabIndex = 38;
+            CompatOptionsBox.TextChanged += UpdateCommand;
             // 
             // CompatOptionsCheck
             // 
-            this.CompatOptionsCheck.AutoSize = true;
-            this.CompatOptionsCheck.Location = new System.Drawing.Point(8, 596);
-            this.CompatOptionsCheck.Name = "CompatOptionsCheck";
-            this.CompatOptionsCheck.Size = new System.Drawing.Size(122, 19);
-            this.CompatOptionsCheck.TabIndex = 37;
-            this.CompatOptionsCheck.Text = "--compat-options";
-            this.CompatOptionsCheck.UseVisualStyleBackColor = true;
+            CompatOptionsCheck.AutoSize = true;
+            CompatOptionsCheck.Location = new Point(8, 596);
+            CompatOptionsCheck.Name = "CompatOptionsCheck";
+            CompatOptionsCheck.Size = new Size(122, 19);
+            CompatOptionsCheck.TabIndex = 37;
+            CompatOptionsCheck.Text = "--compat-options";
+            CompatOptionsCheck.UseVisualStyleBackColor = true;
+            CompatOptionsCheck.Click += SpecialClicked;
             // 
-            // checkBox16
+            // NoColorsCheck
             // 
-            this.checkBox16.AutoSize = true;
-            this.checkBox16.Location = new System.Drawing.Point(8, 571);
-            this.checkBox16.Name = "checkBox16";
-            this.checkBox16.Size = new System.Drawing.Size(87, 19);
-            this.checkBox16.TabIndex = 36;
-            this.checkBox16.Text = "--no-colors";
-            this.checkBox16.UseVisualStyleBackColor = true;
+            NoColorsCheck.AutoSize = true;
+            NoColorsCheck.Location = new Point(8, 571);
+            NoColorsCheck.Name = "NoColorsCheck";
+            NoColorsCheck.Size = new Size(87, 19);
+            NoColorsCheck.TabIndex = 36;
+            NoColorsCheck.Text = "--no-colors";
+            NoColorsCheck.UseVisualStyleBackColor = true;
             // 
             // NoMarkWatchedCheck
             // 
-            this.NoMarkWatchedCheck.AutoSize = true;
-            this.NoMarkWatchedCheck.Location = new System.Drawing.Point(8, 546);
-            this.NoMarkWatchedCheck.Name = "NoMarkWatchedCheck";
-            this.NoMarkWatchedCheck.Size = new System.Drawing.Size(132, 19);
-            this.NoMarkWatchedCheck.TabIndex = 35;
-            this.NoMarkWatchedCheck.Text = "--no-mark-watched";
-            this.NoMarkWatchedCheck.UseVisualStyleBackColor = true;
-            this.NoMarkWatchedCheck.Click += new System.EventHandler(this.PolarClicked);
+            NoMarkWatchedCheck.AutoSize = true;
+            NoMarkWatchedCheck.Location = new Point(8, 546);
+            NoMarkWatchedCheck.Name = "NoMarkWatchedCheck";
+            NoMarkWatchedCheck.Size = new Size(132, 19);
+            NoMarkWatchedCheck.TabIndex = 35;
+            NoMarkWatchedCheck.Text = "--no-mark-watched";
+            NoMarkWatchedCheck.UseVisualStyleBackColor = true;
             // 
             // MarkWatchedCheck
             // 
-            this.MarkWatchedCheck.AutoSize = true;
-            this.MarkWatchedCheck.Location = new System.Drawing.Point(8, 521);
-            this.MarkWatchedCheck.Name = "MarkWatchedCheck";
-            this.MarkWatchedCheck.Size = new System.Drawing.Size(113, 19);
-            this.MarkWatchedCheck.TabIndex = 34;
-            this.MarkWatchedCheck.Text = "--mark-watched";
-            this.MarkWatchedCheck.UseVisualStyleBackColor = true;
-            this.MarkWatchedCheck.Click += new System.EventHandler(this.PolarClicked);
+            MarkWatchedCheck.AutoSize = true;
+            MarkWatchedCheck.Location = new Point(8, 521);
+            MarkWatchedCheck.Name = "MarkWatchedCheck";
+            MarkWatchedCheck.Size = new Size(113, 19);
+            MarkWatchedCheck.TabIndex = 34;
+            MarkWatchedCheck.Text = "--mark-watched";
+            MarkWatchedCheck.UseVisualStyleBackColor = true;
             // 
             // NoWaitForVideoCheck
             // 
-            this.NoWaitForVideoCheck.AutoSize = true;
-            this.NoWaitForVideoCheck.Location = new System.Drawing.Point(8, 496);
-            this.NoWaitForVideoCheck.Name = "NoWaitForVideoCheck";
-            this.NoWaitForVideoCheck.Size = new System.Drawing.Size(131, 19);
-            this.NoWaitForVideoCheck.TabIndex = 33;
-            this.NoWaitForVideoCheck.Text = "--no-wait-for-video";
-            this.NoWaitForVideoCheck.UseVisualStyleBackColor = true;
-            this.NoWaitForVideoCheck.Click += new System.EventHandler(this.PolarClicked);
+            NoWaitForVideoCheck.AutoSize = true;
+            NoWaitForVideoCheck.Location = new Point(8, 496);
+            NoWaitForVideoCheck.Name = "NoWaitForVideoCheck";
+            NoWaitForVideoCheck.Size = new Size(131, 19);
+            NoWaitForVideoCheck.TabIndex = 33;
+            NoWaitForVideoCheck.Text = "--no-wait-for-video";
+            NoWaitForVideoCheck.UseVisualStyleBackColor = true;
             // 
             // WaitForVideoBox
             // 
-            this.WaitForVideoBox.Enabled = false;
-            this.WaitForVideoBox.Location = new System.Drawing.Point(129, 467);
-            this.WaitForVideoBox.Name = "WaitForVideoBox";
-            this.WaitForVideoBox.Size = new System.Drawing.Size(241, 23);
-            this.WaitForVideoBox.TabIndex = 32;
+            WaitForVideoBox.Enabled = false;
+            WaitForVideoBox.Location = new Point(129, 467);
+            WaitForVideoBox.Name = "WaitForVideoBox";
+            WaitForVideoBox.Size = new Size(241, 23);
+            WaitForVideoBox.TabIndex = 32;
+            WaitForVideoBox.TextChanged += UpdateCommand;
             // 
             // WaitForVideoCheck
             // 
-            this.WaitForVideoCheck.AutoSize = true;
-            this.WaitForVideoCheck.Location = new System.Drawing.Point(8, 471);
-            this.WaitForVideoCheck.Name = "WaitForVideoCheck";
-            this.WaitForVideoCheck.Size = new System.Drawing.Size(112, 19);
-            this.WaitForVideoCheck.TabIndex = 31;
-            this.WaitForVideoCheck.Text = "--wait-for-video";
-            this.WaitForVideoCheck.UseVisualStyleBackColor = true;
-            this.WaitForVideoCheck.Click += new System.EventHandler(this.PolarClicked);
+            WaitForVideoCheck.AutoSize = true;
+            WaitForVideoCheck.Location = new Point(8, 471);
+            WaitForVideoCheck.Name = "WaitForVideoCheck";
+            WaitForVideoCheck.Size = new Size(112, 19);
+            WaitForVideoCheck.TabIndex = 31;
+            WaitForVideoCheck.Text = "--wait-for-video";
+            WaitForVideoCheck.UseVisualStyleBackColor = true;
+            WaitForVideoCheck.CheckedChanged += SpecialClicked;
             // 
             // NoLiveFromStartCheck
             // 
-            this.NoLiveFromStartCheck.AutoSize = true;
-            this.NoLiveFromStartCheck.Location = new System.Drawing.Point(8, 446);
-            this.NoLiveFromStartCheck.Name = "NoLiveFromStartCheck";
-            this.NoLiveFromStartCheck.Size = new System.Drawing.Size(132, 19);
-            this.NoLiveFromStartCheck.TabIndex = 30;
-            this.NoLiveFromStartCheck.Text = "--no-live-from-start";
-            this.NoLiveFromStartCheck.UseVisualStyleBackColor = true;
-            this.NoLiveFromStartCheck.Click += new System.EventHandler(this.PolarClicked);
+            NoLiveFromStartCheck.AutoSize = true;
+            NoLiveFromStartCheck.Location = new Point(8, 446);
+            NoLiveFromStartCheck.Name = "NoLiveFromStartCheck";
+            NoLiveFromStartCheck.Size = new Size(132, 19);
+            NoLiveFromStartCheck.TabIndex = 30;
+            NoLiveFromStartCheck.Text = "--no-live-from-start";
+            NoLiveFromStartCheck.UseVisualStyleBackColor = true;
             // 
             // LiveFromStartCheck
             // 
-            this.LiveFromStartCheck.AutoSize = true;
-            this.LiveFromStartCheck.Location = new System.Drawing.Point(8, 421);
-            this.LiveFromStartCheck.Name = "LiveFromStartCheck";
-            this.LiveFromStartCheck.Size = new System.Drawing.Size(113, 19);
-            this.LiveFromStartCheck.TabIndex = 29;
-            this.LiveFromStartCheck.Text = "--live-from-start";
-            this.LiveFromStartCheck.UseVisualStyleBackColor = true;
-            this.LiveFromStartCheck.Click += new System.EventHandler(this.PolarClicked);
+            LiveFromStartCheck.AutoSize = true;
+            LiveFromStartCheck.Location = new Point(8, 421);
+            LiveFromStartCheck.Name = "LiveFromStartCheck";
+            LiveFromStartCheck.Size = new Size(113, 19);
+            LiveFromStartCheck.TabIndex = 29;
+            LiveFromStartCheck.Text = "--live-from-start";
+            LiveFromStartCheck.UseVisualStyleBackColor = true;
             // 
             // NoFlatPlaylistCheck
             // 
-            this.NoFlatPlaylistCheck.AutoSize = true;
-            this.NoFlatPlaylistCheck.Location = new System.Drawing.Point(8, 396);
-            this.NoFlatPlaylistCheck.Name = "NoFlatPlaylistCheck";
-            this.NoFlatPlaylistCheck.Size = new System.Drawing.Size(114, 19);
-            this.NoFlatPlaylistCheck.TabIndex = 28;
-            this.NoFlatPlaylistCheck.Text = "--no-flat-playlist";
-            this.NoFlatPlaylistCheck.UseVisualStyleBackColor = true;
-            this.NoFlatPlaylistCheck.Click += new System.EventHandler(this.PolarClicked);
+            NoFlatPlaylistCheck.AutoSize = true;
+            NoFlatPlaylistCheck.Location = new Point(8, 396);
+            NoFlatPlaylistCheck.Name = "NoFlatPlaylistCheck";
+            NoFlatPlaylistCheck.Size = new Size(114, 19);
+            NoFlatPlaylistCheck.TabIndex = 28;
+            NoFlatPlaylistCheck.Text = "--no-flat-playlist";
+            NoFlatPlaylistCheck.UseVisualStyleBackColor = true;
             // 
             // FlatPlaylistCheck
             // 
-            this.FlatPlaylistCheck.AutoSize = true;
-            this.FlatPlaylistCheck.Location = new System.Drawing.Point(8, 371);
-            this.FlatPlaylistCheck.Name = "FlatPlaylistCheck";
-            this.FlatPlaylistCheck.Size = new System.Drawing.Size(95, 19);
-            this.FlatPlaylistCheck.TabIndex = 27;
-            this.FlatPlaylistCheck.Text = "--flat-playlist";
-            this.FlatPlaylistCheck.UseVisualStyleBackColor = true;
-            this.FlatPlaylistCheck.Click += new System.EventHandler(this.PolarClicked);
+            FlatPlaylistCheck.AutoSize = true;
+            FlatPlaylistCheck.Location = new Point(8, 371);
+            FlatPlaylistCheck.Name = "FlatPlaylistCheck";
+            FlatPlaylistCheck.Size = new Size(95, 19);
+            FlatPlaylistCheck.TabIndex = 27;
+            FlatPlaylistCheck.Text = "--flat-playlist";
+            FlatPlaylistCheck.UseVisualStyleBackColor = true;
             // 
             // checkBox7
             // 
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.Location = new System.Drawing.Point(8, 346);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(142, 19);
-            this.checkBox7.TabIndex = 26;
-            this.checkBox7.Text = "--no-config-locations";
-            this.checkBox7.UseVisualStyleBackColor = true;
+            checkBox7.AutoSize = true;
+            checkBox7.Location = new Point(8, 346);
+            checkBox7.Name = "checkBox7";
+            checkBox7.Size = new Size(142, 19);
+            checkBox7.TabIndex = 26;
+            checkBox7.Text = "--no-config-locations";
+            checkBox7.UseVisualStyleBackColor = true;
             // 
             // checkBox6
             // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(8, 321);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(109, 19);
-            this.checkBox6.TabIndex = 25;
-            this.checkBox6.Text = "--ignore-config";
-            this.checkBox6.UseVisualStyleBackColor = true;
+            checkBox6.AutoSize = true;
+            checkBox6.Location = new Point(8, 321);
+            checkBox6.Name = "checkBox6";
+            checkBox6.Size = new Size(109, 19);
+            checkBox6.TabIndex = 25;
+            checkBox6.Text = "--ignore-config";
+            checkBox6.UseVisualStyleBackColor = true;
             // 
             // DefaultSearchBox
             // 
-            this.DefaultSearchBox.Enabled = false;
-            this.DefaultSearchBox.Location = new System.Drawing.Point(130, 294);
-            this.DefaultSearchBox.Name = "DefaultSearchBox";
-            this.DefaultSearchBox.Size = new System.Drawing.Size(241, 23);
-            this.DefaultSearchBox.TabIndex = 24;
+            DefaultSearchBox.Enabled = false;
+            DefaultSearchBox.Location = new Point(130, 294);
+            DefaultSearchBox.Name = "DefaultSearchBox";
+            DefaultSearchBox.Size = new Size(241, 23);
+            DefaultSearchBox.TabIndex = 24;
+            DefaultSearchBox.TextChanged += UpdateCommand;
             // 
             // DefaultSearchCheck
             // 
-            this.DefaultSearchCheck.AutoSize = true;
-            this.DefaultSearchCheck.Location = new System.Drawing.Point(8, 296);
-            this.DefaultSearchCheck.Name = "DefaultSearchCheck";
-            this.DefaultSearchCheck.Size = new System.Drawing.Size(112, 19);
-            this.DefaultSearchCheck.TabIndex = 23;
-            this.DefaultSearchCheck.Text = "--default-search";
-            this.DefaultSearchCheck.UseVisualStyleBackColor = true;
+            DefaultSearchCheck.AutoSize = true;
+            DefaultSearchCheck.Location = new Point(8, 296);
+            DefaultSearchCheck.Name = "DefaultSearchCheck";
+            DefaultSearchCheck.Size = new Size(112, 19);
+            DefaultSearchCheck.TabIndex = 23;
+            DefaultSearchCheck.Text = "--default-search";
+            DefaultSearchCheck.UseVisualStyleBackColor = true;
+            DefaultSearchCheck.Click += SpecialClicked;
             // 
             // forcegenericextractorcheck
             // 
-            this.forcegenericextractorcheck.AutoSize = true;
-            this.forcegenericextractorcheck.Location = new System.Drawing.Point(8, 271);
-            this.forcegenericextractorcheck.Name = "forcegenericextractorcheck";
-            this.forcegenericextractorcheck.Size = new System.Drawing.Size(162, 19);
-            this.forcegenericextractorcheck.TabIndex = 22;
-            this.forcegenericextractorcheck.Text = "--force-generic-extractor ";
-            this.forcegenericextractorcheck.UseVisualStyleBackColor = true;
+            forcegenericextractorcheck.AutoSize = true;
+            forcegenericextractorcheck.Location = new Point(8, 271);
+            forcegenericextractorcheck.Name = "forcegenericextractorcheck";
+            forcegenericextractorcheck.Size = new Size(162, 19);
+            forcegenericextractorcheck.TabIndex = 22;
+            forcegenericextractorcheck.Text = "--force-generic-extractor ";
+            forcegenericextractorcheck.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(8, 242);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(131, 23);
-            this.button3.TabIndex = 21;
-            this.button3.Text = "Extractor Descriptions";
-            this.button3.UseVisualStyleBackColor = true;
+            button3.Location = new Point(8, 242);
+            button3.Name = "button3";
+            button3.Size = new Size(131, 23);
+            button3.TabIndex = 21;
+            button3.Text = "Extractor Descriptions";
+            button3.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(8, 213);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(96, 23);
-            this.button2.TabIndex = 20;
-            this.button2.Text = "List Extractors";
-            this.button2.UseVisualStyleBackColor = true;
+            button2.Location = new Point(8, 213);
+            button2.Name = "button2";
+            button2.Size = new Size(96, 23);
+            button2.TabIndex = 20;
+            button2.Text = "List Extractors";
+            button2.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(8, 184);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(113, 23);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "Dump User Agent";
-            this.button1.UseVisualStyleBackColor = true;
+            button1.Location = new Point(8, 184);
+            button1.Name = "button1";
+            button1.Size = new Size(113, 23);
+            button1.TabIndex = 19;
+            button1.Text = "Dump User Agent";
+            button1.UseVisualStyleBackColor = true;
             // 
             // AbortCheck
             // 
-            this.AbortCheck.AutoSize = true;
-            this.AbortCheck.Location = new System.Drawing.Point(8, 159);
-            this.AbortCheck.Name = "AbortCheck";
-            this.AbortCheck.Size = new System.Drawing.Size(113, 19);
-            this.AbortCheck.TabIndex = 18;
-            this.AbortCheck.Text = "--abort-on-error";
-            this.AbortCheck.UseVisualStyleBackColor = true;
-            this.AbortCheck.Click += new System.EventHandler(this.PolarClicked);
+            AbortCheck.AutoSize = true;
+            AbortCheck.Location = new Point(8, 159);
+            AbortCheck.Name = "AbortCheck";
+            AbortCheck.Size = new Size(113, 19);
+            AbortCheck.TabIndex = 18;
+            AbortCheck.Text = "--abort-on-error";
+            AbortCheck.UseVisualStyleBackColor = true;
             // 
             // NoAbortCheck
             // 
-            this.NoAbortCheck.AutoSize = true;
-            this.NoAbortCheck.Location = new System.Drawing.Point(8, 134);
-            this.NoAbortCheck.Name = "NoAbortCheck";
-            this.NoAbortCheck.Size = new System.Drawing.Size(132, 19);
-            this.NoAbortCheck.TabIndex = 17;
-            this.NoAbortCheck.Text = "--no-abort-on-error";
-            this.NoAbortCheck.UseVisualStyleBackColor = true;
-            this.NoAbortCheck.Click += new System.EventHandler(this.PolarClicked);
+            NoAbortCheck.AutoSize = true;
+            NoAbortCheck.Location = new Point(8, 134);
+            NoAbortCheck.Name = "NoAbortCheck";
+            NoAbortCheck.Size = new Size(132, 19);
+            NoAbortCheck.TabIndex = 17;
+            NoAbortCheck.Text = "--no-abort-on-error";
+            NoAbortCheck.UseVisualStyleBackColor = true;
             // 
             // ignoreerrorscheck
             // 
-            this.ignoreerrorscheck.AutoSize = true;
-            this.ignoreerrorscheck.Location = new System.Drawing.Point(8, 109);
-            this.ignoreerrorscheck.Name = "ignoreerrorscheck";
-            this.ignoreerrorscheck.Size = new System.Drawing.Size(105, 19);
-            this.ignoreerrorscheck.TabIndex = 16;
-            this.ignoreerrorscheck.Text = "--ignore-errors";
-            this.ignoreerrorscheck.UseVisualStyleBackColor = true;
-            this.ignoreerrorscheck.CheckedChanged += new System.EventHandler(this.PolarClicked);
+            ignoreerrorscheck.AutoSize = true;
+            ignoreerrorscheck.Location = new Point(8, 109);
+            ignoreerrorscheck.Name = "ignoreerrorscheck";
+            ignoreerrorscheck.Size = new Size(105, 19);
+            ignoreerrorscheck.TabIndex = 16;
+            ignoreerrorscheck.Text = "--ignore-errors";
+            ignoreerrorscheck.UseVisualStyleBackColor = true;
             // 
             // Update
             // 
-            this.Update.Location = new System.Drawing.Point(8, 80);
-            this.Update.Name = "Update";
-            this.Update.Size = new System.Drawing.Size(75, 23);
-            this.Update.TabIndex = 15;
-            this.Update.Text = "Update";
-            this.Update.UseVisualStyleBackColor = true;
+            Update.Location = new Point(8, 80);
+            Update.Name = "Update";
+            Update.Size = new Size(75, 23);
+            Update.TabIndex = 15;
+            Update.Text = "Update";
+            Update.UseVisualStyleBackColor = true;
             // 
             // VersionButton
             // 
-            this.VersionButton.Location = new System.Drawing.Point(8, 51);
-            this.VersionButton.Name = "VersionButton";
-            this.VersionButton.Size = new System.Drawing.Size(75, 23);
-            this.VersionButton.TabIndex = 14;
-            this.VersionButton.Text = "Version";
-            this.VersionButton.UseVisualStyleBackColor = true;
+            VersionButton.Location = new Point(8, 51);
+            VersionButton.Name = "VersionButton";
+            VersionButton.Size = new Size(75, 23);
+            VersionButton.TabIndex = 14;
+            VersionButton.Text = "Version";
+            VersionButton.UseVisualStyleBackColor = true;
             // 
             // HelpButton
             // 
-            this.HelpButton.Location = new System.Drawing.Point(8, 22);
-            this.HelpButton.Name = "HelpButton";
-            this.HelpButton.Size = new System.Drawing.Size(75, 23);
-            this.HelpButton.TabIndex = 13;
-            this.HelpButton.Text = "Help";
-            this.HelpButton.UseVisualStyleBackColor = true;
+            HelpButton.Location = new Point(8, 22);
+            HelpButton.Name = "HelpButton";
+            HelpButton.Size = new Size(75, 23);
+            HelpButton.TabIndex = 13;
+            HelpButton.Text = "Help";
+            HelpButton.UseVisualStyleBackColor = true;
             // 
             // NetworkGroupBox
             // 
-            this.NetworkGroupBox.BackColor = System.Drawing.SystemColors.Control;
-            this.NetworkGroupBox.Controls.Add(this.checkBox5);
-            this.NetworkGroupBox.Controls.Add(this.checkBox3);
-            this.NetworkGroupBox.Controls.Add(this.checkBox2);
-            this.NetworkGroupBox.Controls.Add(this.textBox2);
-            this.NetworkGroupBox.Controls.Add(this.SourceAddressIPCheck);
-            this.NetworkGroupBox.Controls.Add(this.textBox1);
-            this.NetworkGroupBox.Controls.Add(this.SocketTimeoutCheck);
-            this.NetworkGroupBox.Controls.Add(this.ProxyTextBox);
-            this.NetworkGroupBox.Controls.Add(this.ProxyCheck);
-            this.NetworkGroupBox.Location = new System.Drawing.Point(7, 6);
-            this.NetworkGroupBox.Name = "NetworkGroupBox";
-            this.NetworkGroupBox.Size = new System.Drawing.Size(386, 186);
-            this.NetworkGroupBox.TabIndex = 13;
-            this.NetworkGroupBox.TabStop = false;
-            this.NetworkGroupBox.Text = "Network";
+            NetworkGroupBox.BackColor = SystemColors.Control;
+            NetworkGroupBox.Controls.Add(checkBox5);
+            NetworkGroupBox.Controls.Add(checkBox3);
+            NetworkGroupBox.Controls.Add(checkBox2);
+            NetworkGroupBox.Controls.Add(SourceAddressBox);
+            NetworkGroupBox.Controls.Add(SourceAddressIPCheck);
+            NetworkGroupBox.Controls.Add(SocketTimeoutBox);
+            NetworkGroupBox.Controls.Add(SocketTimeoutCheck);
+            NetworkGroupBox.Controls.Add(ProxyTextBox);
+            NetworkGroupBox.Controls.Add(ProxyCheck);
+            NetworkGroupBox.Location = new Point(7, 6);
+            NetworkGroupBox.Name = "NetworkGroupBox";
+            NetworkGroupBox.Size = new Size(386, 186);
+            NetworkGroupBox.TabIndex = 13;
+            NetworkGroupBox.TabStop = false;
+            NetworkGroupBox.Text = "Network";
             // 
             // checkBox5
             // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(11, 157);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(116, 19);
-            this.checkBox5.TabIndex = 8;
-            this.checkBox5.Text = "--enable-file-urls";
-            this.checkBox5.UseVisualStyleBackColor = true;
+            checkBox5.AutoSize = true;
+            checkBox5.Location = new Point(11, 157);
+            checkBox5.Name = "checkBox5";
+            checkBox5.Size = new Size(116, 19);
+            checkBox5.TabIndex = 8;
+            checkBox5.Text = "--enable-file-urls";
+            checkBox5.UseVisualStyleBackColor = true;
             // 
             // checkBox3
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(11, 130);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(90, 19);
-            this.checkBox3.TabIndex = 7;
-            this.checkBox3.Text = "--force-ipv6";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            checkBox3.AutoSize = true;
+            checkBox3.Location = new Point(11, 130);
+            checkBox3.Name = "checkBox3";
+            checkBox3.Size = new Size(90, 19);
+            checkBox3.TabIndex = 7;
+            checkBox3.Text = "--force-ipv6";
+            checkBox3.UseVisualStyleBackColor = true;
             // 
             // checkBox2
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(11, 103);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(90, 19);
-            this.checkBox2.TabIndex = 6;
-            this.checkBox2.Text = "--force-ipv4";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            checkBox2.AutoSize = true;
+            checkBox2.Location = new Point(11, 103);
+            checkBox2.Name = "checkBox2";
+            checkBox2.Size = new Size(90, 19);
+            checkBox2.TabIndex = 6;
+            checkBox2.Text = "--force-ipv4";
+            checkBox2.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // SourceAddressBox
             // 
-            this.textBox2.Enabled = false;
-            this.textBox2.Location = new System.Drawing.Point(134, 74);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(165, 23);
-            this.textBox2.TabIndex = 5;
+            SourceAddressBox.Enabled = false;
+            SourceAddressBox.Location = new Point(134, 74);
+            SourceAddressBox.Name = "SourceAddressBox";
+            SourceAddressBox.Size = new Size(165, 23);
+            SourceAddressBox.TabIndex = 5;
             // 
             // SourceAddressIPCheck
             // 
-            this.SourceAddressIPCheck.AutoSize = true;
-            this.SourceAddressIPCheck.Location = new System.Drawing.Point(11, 76);
-            this.SourceAddressIPCheck.Name = "SourceAddressIPCheck";
-            this.SourceAddressIPCheck.Size = new System.Drawing.Size(116, 19);
-            this.SourceAddressIPCheck.TabIndex = 4;
-            this.SourceAddressIPCheck.Text = "--source-address";
-            this.SourceAddressIPCheck.UseVisualStyleBackColor = true;
+            SourceAddressIPCheck.AutoSize = true;
+            SourceAddressIPCheck.Location = new Point(11, 76);
+            SourceAddressIPCheck.Name = "SourceAddressIPCheck";
+            SourceAddressIPCheck.Size = new Size(116, 19);
+            SourceAddressIPCheck.TabIndex = 4;
+            SourceAddressIPCheck.Text = "--source-address";
+            SourceAddressIPCheck.UseVisualStyleBackColor = true;
+            SourceAddressIPCheck.Click += SpecialClicked;
             // 
-            // textBox1
+            // SocketTimeoutBox
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(134, 47);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(165, 23);
-            this.textBox1.TabIndex = 3;
+            SocketTimeoutBox.Enabled = false;
+            SocketTimeoutBox.Location = new Point(134, 47);
+            SocketTimeoutBox.Name = "SocketTimeoutBox";
+            SocketTimeoutBox.Size = new Size(165, 23);
+            SocketTimeoutBox.TabIndex = 3;
             // 
             // SocketTimeoutCheck
             // 
-            this.SocketTimeoutCheck.AutoSize = true;
-            this.SocketTimeoutCheck.Location = new System.Drawing.Point(11, 49);
-            this.SocketTimeoutCheck.Name = "SocketTimeoutCheck";
-            this.SocketTimeoutCheck.Size = new System.Drawing.Size(117, 19);
-            this.SocketTimeoutCheck.TabIndex = 2;
-            this.SocketTimeoutCheck.Text = "--socket-timeout";
-            this.SocketTimeoutCheck.UseVisualStyleBackColor = true;
+            SocketTimeoutCheck.AutoSize = true;
+            SocketTimeoutCheck.Location = new Point(11, 49);
+            SocketTimeoutCheck.Name = "SocketTimeoutCheck";
+            SocketTimeoutCheck.Size = new Size(117, 19);
+            SocketTimeoutCheck.TabIndex = 2;
+            SocketTimeoutCheck.Text = "--socket-timeout";
+            SocketTimeoutCheck.UseVisualStyleBackColor = true;
+            SocketTimeoutCheck.Click += SpecialClicked;
             // 
             // ProxyTextBox
             // 
-            this.ProxyTextBox.Enabled = false;
-            this.ProxyTextBox.Location = new System.Drawing.Point(81, 20);
-            this.ProxyTextBox.Name = "ProxyTextBox";
-            this.ProxyTextBox.Size = new System.Drawing.Size(165, 23);
-            this.ProxyTextBox.TabIndex = 1;
+            ProxyTextBox.Enabled = false;
+            ProxyTextBox.Location = new Point(81, 20);
+            ProxyTextBox.Name = "ProxyTextBox";
+            ProxyTextBox.Size = new Size(165, 23);
+            ProxyTextBox.TabIndex = 1;
             // 
             // ProxyCheck
             // 
-            this.ProxyCheck.AutoSize = true;
-            this.ProxyCheck.Location = new System.Drawing.Point(11, 22);
-            this.ProxyCheck.Name = "ProxyCheck";
-            this.ProxyCheck.Size = new System.Drawing.Size(66, 19);
-            this.ProxyCheck.TabIndex = 0;
-            this.ProxyCheck.Text = "--proxy";
-            this.ProxyCheck.UseVisualStyleBackColor = true;
+            ProxyCheck.AutoSize = true;
+            ProxyCheck.Location = new Point(11, 22);
+            ProxyCheck.Name = "ProxyCheck";
+            ProxyCheck.Size = new Size(66, 19);
+            ProxyCheck.TabIndex = 0;
+            ProxyCheck.Text = "--proxy";
+            ProxyCheck.UseVisualStyleBackColor = true;
+            ProxyCheck.Click += SpecialClicked;
             // 
             // GeorestrictionGroupBox
             // 
-            this.GeorestrictionGroupBox.BackColor = System.Drawing.SystemColors.Control;
-            this.GeorestrictionGroupBox.Controls.Add(this.checkBox12);
-            this.GeorestrictionGroupBox.Controls.Add(this.checkBox11);
-            this.GeorestrictionGroupBox.Controls.Add(this.textBox5);
-            this.GeorestrictionGroupBox.Controls.Add(this.checkBox10);
-            this.GeorestrictionGroupBox.Controls.Add(this.textBox4);
-            this.GeorestrictionGroupBox.Controls.Add(this.checkBox9);
-            this.GeorestrictionGroupBox.Controls.Add(this.GeoVerificationProxyTextbox);
-            this.GeorestrictionGroupBox.Controls.Add(this.checkBox8);
-            this.GeorestrictionGroupBox.Location = new System.Drawing.Point(7, 198);
-            this.GeorestrictionGroupBox.Name = "GeorestrictionGroupBox";
-            this.GeorestrictionGroupBox.Size = new System.Drawing.Size(386, 161);
-            this.GeorestrictionGroupBox.TabIndex = 14;
-            this.GeorestrictionGroupBox.TabStop = false;
-            this.GeorestrictionGroupBox.Text = "Geo-restriction";
+            GeorestrictionGroupBox.BackColor = SystemColors.Control;
+            GeorestrictionGroupBox.Controls.Add(checkBox12);
+            GeorestrictionGroupBox.Controls.Add(checkBox11);
+            GeorestrictionGroupBox.Controls.Add(GeoBypassIPBlockBox);
+            GeorestrictionGroupBox.Controls.Add(GeoBypassIPBlockCheck);
+            GeorestrictionGroupBox.Controls.Add(GeoBypassCountryBox);
+            GeorestrictionGroupBox.Controls.Add(GeoBypassCountryCheck);
+            GeorestrictionGroupBox.Controls.Add(GeoVerificationProxyBox);
+            GeorestrictionGroupBox.Controls.Add(GeoVerificationProxyTextCheck);
+            GeorestrictionGroupBox.Location = new Point(7, 198);
+            GeorestrictionGroupBox.Name = "GeorestrictionGroupBox";
+            GeorestrictionGroupBox.Size = new Size(386, 161);
+            GeorestrictionGroupBox.TabIndex = 14;
+            GeorestrictionGroupBox.TabStop = false;
+            GeorestrictionGroupBox.Text = "Geo-restriction";
             // 
             // checkBox12
             // 
-            this.checkBox12.AutoSize = true;
-            this.checkBox12.Location = new System.Drawing.Point(11, 78);
-            this.checkBox12.Name = "checkBox12";
-            this.checkBox12.Size = new System.Drawing.Size(116, 19);
-            this.checkBox12.TabIndex = 9;
-            this.checkBox12.Text = "--no-geo-bypass";
-            this.checkBox12.UseVisualStyleBackColor = true;
+            checkBox12.AutoSize = true;
+            checkBox12.Location = new Point(11, 78);
+            checkBox12.Name = "checkBox12";
+            checkBox12.Size = new Size(116, 19);
+            checkBox12.TabIndex = 9;
+            checkBox12.Text = "--no-geo-bypass";
+            checkBox12.UseVisualStyleBackColor = true;
             // 
             // checkBox11
             // 
-            this.checkBox11.AutoSize = true;
-            this.checkBox11.Location = new System.Drawing.Point(11, 51);
-            this.checkBox11.Name = "checkBox11";
-            this.checkBox11.Size = new System.Drawing.Size(97, 19);
-            this.checkBox11.TabIndex = 8;
-            this.checkBox11.Text = "--geo-bypass";
-            this.checkBox11.UseVisualStyleBackColor = true;
+            checkBox11.AutoSize = true;
+            checkBox11.Location = new Point(11, 51);
+            checkBox11.Name = "checkBox11";
+            checkBox11.Size = new Size(97, 19);
+            checkBox11.TabIndex = 8;
+            checkBox11.Text = "--geo-bypass";
+            checkBox11.UseVisualStyleBackColor = true;
             // 
-            // textBox5
+            // GeoBypassIPBlockBox
             // 
-            this.textBox5.Enabled = false;
-            this.textBox5.Location = new System.Drawing.Point(163, 130);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(165, 23);
-            this.textBox5.TabIndex = 7;
+            GeoBypassIPBlockBox.Enabled = false;
+            GeoBypassIPBlockBox.Location = new Point(163, 130);
+            GeoBypassIPBlockBox.Name = "GeoBypassIPBlockBox";
+            GeoBypassIPBlockBox.Size = new Size(165, 23);
+            GeoBypassIPBlockBox.TabIndex = 7;
             // 
-            // checkBox10
+            // GeoBypassIPBlockCheck
             // 
-            this.checkBox10.AutoSize = true;
-            this.checkBox10.Location = new System.Drawing.Point(11, 132);
-            this.checkBox10.Name = "checkBox10";
-            this.checkBox10.Size = new System.Drawing.Size(146, 19);
-            this.checkBox10.TabIndex = 6;
-            this.checkBox10.Text = "--geo-bypass-ip-block";
-            this.checkBox10.UseVisualStyleBackColor = true;
+            GeoBypassIPBlockCheck.AutoSize = true;
+            GeoBypassIPBlockCheck.Location = new Point(11, 132);
+            GeoBypassIPBlockCheck.Name = "GeoBypassIPBlockCheck";
+            GeoBypassIPBlockCheck.Size = new Size(146, 19);
+            GeoBypassIPBlockCheck.TabIndex = 6;
+            GeoBypassIPBlockCheck.Text = "--geo-bypass-ip-block";
+            GeoBypassIPBlockCheck.UseVisualStyleBackColor = true;
+            GeoBypassIPBlockCheck.Click += SpecialClicked;
             // 
-            // textBox4
+            // GeoBypassCountryBox
             // 
-            this.textBox4.Enabled = false;
-            this.textBox4.Location = new System.Drawing.Point(163, 103);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(165, 23);
-            this.textBox4.TabIndex = 5;
+            GeoBypassCountryBox.Enabled = false;
+            GeoBypassCountryBox.Location = new Point(163, 103);
+            GeoBypassCountryBox.Name = "GeoBypassCountryBox";
+            GeoBypassCountryBox.Size = new Size(165, 23);
+            GeoBypassCountryBox.TabIndex = 5;
             // 
-            // checkBox9
+            // GeoBypassCountryCheck
             // 
-            this.checkBox9.AutoSize = true;
-            this.checkBox9.Location = new System.Drawing.Point(11, 105);
-            this.checkBox9.Name = "checkBox9";
-            this.checkBox9.Size = new System.Drawing.Size(143, 19);
-            this.checkBox9.TabIndex = 4;
-            this.checkBox9.Text = "--geo-bypass-country";
-            this.checkBox9.UseVisualStyleBackColor = true;
+            GeoBypassCountryCheck.AutoSize = true;
+            GeoBypassCountryCheck.Location = new Point(11, 105);
+            GeoBypassCountryCheck.Name = "GeoBypassCountryCheck";
+            GeoBypassCountryCheck.Size = new Size(143, 19);
+            GeoBypassCountryCheck.TabIndex = 4;
+            GeoBypassCountryCheck.Text = "--geo-bypass-country";
+            GeoBypassCountryCheck.UseVisualStyleBackColor = true;
+            GeoBypassCountryCheck.Click += SpecialClicked;
             // 
-            // GeoVerificationProxyTextbox
+            // GeoVerificationProxyBox
             // 
-            this.GeoVerificationProxyTextbox.Enabled = false;
-            this.GeoVerificationProxyTextbox.Location = new System.Drawing.Point(175, 22);
-            this.GeoVerificationProxyTextbox.Name = "GeoVerificationProxyTextbox";
-            this.GeoVerificationProxyTextbox.Size = new System.Drawing.Size(165, 23);
-            this.GeoVerificationProxyTextbox.TabIndex = 3;
+            GeoVerificationProxyBox.Enabled = false;
+            GeoVerificationProxyBox.Location = new Point(175, 22);
+            GeoVerificationProxyBox.Name = "GeoVerificationProxyBox";
+            GeoVerificationProxyBox.Size = new Size(165, 23);
+            GeoVerificationProxyBox.TabIndex = 3;
             // 
-            // checkBox8
+            // GeoVerificationProxyTextCheck
             // 
-            this.checkBox8.AutoSize = true;
-            this.checkBox8.Location = new System.Drawing.Point(11, 24);
-            this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(155, 19);
-            this.checkBox8.TabIndex = 2;
-            this.checkBox8.Text = "--geo-verification-proxy";
-            this.checkBox8.UseVisualStyleBackColor = true;
+            GeoVerificationProxyTextCheck.AutoSize = true;
+            GeoVerificationProxyTextCheck.Location = new Point(11, 24);
+            GeoVerificationProxyTextCheck.Name = "GeoVerificationProxyTextCheck";
+            GeoVerificationProxyTextCheck.Size = new Size(155, 19);
+            GeoVerificationProxyTextCheck.TabIndex = 2;
+            GeoVerificationProxyTextCheck.Text = "--geo-verification-proxy";
+            GeoVerificationProxyTextCheck.UseVisualStyleBackColor = true;
+            GeoVerificationProxyTextCheck.Click += SpecialClicked;
             // 
             // MainTabControl
             // 
-            this.MainTabControl.Controls.Add(this.Page1);
-            this.MainTabControl.Controls.Add(this.Page2);
-            this.MainTabControl.Location = new System.Drawing.Point(12, 41);
-            this.MainTabControl.Name = "MainTabControl";
-            this.MainTabControl.SelectedIndex = 0;
-            this.MainTabControl.Size = new System.Drawing.Size(801, 703);
-            this.MainTabControl.TabIndex = 16;
+            MainTabControl.Controls.Add(Page1);
+            MainTabControl.Controls.Add(Page2);
+            MainTabControl.Location = new Point(12, 41);
+            MainTabControl.Name = "MainTabControl";
+            MainTabControl.SelectedIndex = 0;
+            MainTabControl.Size = new Size(801, 703);
+            MainTabControl.TabIndex = 16;
             // 
             // Page1
             // 
-            this.Page1.Controls.Add(this.VideoSelectionGroupBox);
-            this.Page1.Controls.Add(this.GeneralGroupBox);
-            this.Page1.Location = new System.Drawing.Point(4, 24);
-            this.Page1.Name = "Page1";
-            this.Page1.Padding = new System.Windows.Forms.Padding(3);
-            this.Page1.Size = new System.Drawing.Size(793, 675);
-            this.Page1.TabIndex = 0;
-            this.Page1.Text = "Page 1";
-            this.Page1.UseVisualStyleBackColor = true;
+            Page1.Controls.Add(VideoSelectionGroupBox);
+            Page1.Controls.Add(GeneralGroupBox);
+            Page1.Location = new Point(4, 24);
+            Page1.Name = "Page1";
+            Page1.Padding = new Padding(3);
+            Page1.Size = new Size(793, 675);
+            Page1.TabIndex = 0;
+            Page1.Text = "Page 1";
+            Page1.UseVisualStyleBackColor = true;
             // 
             // VideoSelectionGroupBox
             // 
-            this.VideoSelectionGroupBox.BackColor = System.Drawing.SystemColors.Control;
-            this.VideoSelectionGroupBox.Controls.Add(this.textBox12);
-            this.VideoSelectionGroupBox.Controls.Add(this.textBox11);
-            this.VideoSelectionGroupBox.Controls.Add(this.textBox10);
-            this.VideoSelectionGroupBox.Controls.Add(this.textBox9);
-            this.VideoSelectionGroupBox.Controls.Add(this.textBox8);
-            this.VideoSelectionGroupBox.Controls.Add(this.textBox7);
-            this.VideoSelectionGroupBox.Controls.Add(this.textBox6);
-            this.VideoSelectionGroupBox.Controls.Add(this.checkBox32);
-            this.VideoSelectionGroupBox.Controls.Add(this.checkBox31);
-            this.VideoSelectionGroupBox.Controls.Add(this.checkBox30);
-            this.VideoSelectionGroupBox.Controls.Add(this.checkBox29);
-            this.VideoSelectionGroupBox.Controls.Add(this.checkBox28);
-            this.VideoSelectionGroupBox.Controls.Add(this.checkBox27);
-            this.VideoSelectionGroupBox.Controls.Add(this.checkBox26);
-            this.VideoSelectionGroupBox.Controls.Add(this.checkBox25);
-            this.VideoSelectionGroupBox.Controls.Add(this.checkBox24);
-            this.VideoSelectionGroupBox.Controls.Add(this.checkBox23);
-            this.VideoSelectionGroupBox.Controls.Add(this.checkBox22);
-            this.VideoSelectionGroupBox.Controls.Add(this.checkBox21);
-            this.VideoSelectionGroupBox.Controls.Add(this.checkBox20);
-            this.VideoSelectionGroupBox.Controls.Add(this.checkBox19);
-            this.VideoSelectionGroupBox.Controls.Add(this.checkBox18);
-            this.VideoSelectionGroupBox.Controls.Add(this.checkBox17);
-            this.VideoSelectionGroupBox.Controls.Add(this.checkBox15);
-            this.VideoSelectionGroupBox.Controls.Add(this.checkBox14);
-            this.VideoSelectionGroupBox.Controls.Add(this.checkBox13);
-            this.VideoSelectionGroupBox.Location = new System.Drawing.Point(399, 9);
-            this.VideoSelectionGroupBox.Name = "VideoSelectionGroupBox";
-            this.VideoSelectionGroupBox.Size = new System.Drawing.Size(386, 663);
-            this.VideoSelectionGroupBox.TabIndex = 13;
-            this.VideoSelectionGroupBox.TabStop = false;
-            this.VideoSelectionGroupBox.Text = "Video Selection";
+            VideoSelectionGroupBox.BackColor = SystemColors.Control;
+            VideoSelectionGroupBox.Controls.Add(SkipPlaylistAfterErrorsBox);
+            VideoSelectionGroupBox.Controls.Add(MaxDownloadsBox);
+            VideoSelectionGroupBox.Controls.Add(DownloadArchiveBox);
+            VideoSelectionGroupBox.Controls.Add(MatchFiltersBox);
+            VideoSelectionGroupBox.Controls.Add(MaxFileSizeBox);
+            VideoSelectionGroupBox.Controls.Add(MinFileSizeBox);
+            VideoSelectionGroupBox.Controls.Add(PlaylistItemsBox);
+            VideoSelectionGroupBox.Controls.Add(AgeLimitCheck);
+            VideoSelectionGroupBox.Controls.Add(DownloadArchiveCheck);
+            VideoSelectionGroupBox.Controls.Add(NoDownloadArchiveCheck);
+            VideoSelectionGroupBox.Controls.Add(MaxDownloadsCheck);
+            VideoSelectionGroupBox.Controls.Add(BreakOnExistingCheck);
+            VideoSelectionGroupBox.Controls.Add(BreakOnRejectCheck);
+            VideoSelectionGroupBox.Controls.Add(BreakPerInputCheck);
+            VideoSelectionGroupBox.Controls.Add(SkipPlaylistAfterErrorsCheck);
+            VideoSelectionGroupBox.Controls.Add(NoBreakPerInputCheck);
+            VideoSelectionGroupBox.Controls.Add(MaxFileSizeCheck);
+            VideoSelectionGroupBox.Controls.Add(DateCheck);
+            VideoSelectionGroupBox.Controls.Add(DateBeforeCheck);
+            VideoSelectionGroupBox.Controls.Add(DateAfterCheck);
+            VideoSelectionGroupBox.Controls.Add(MatchFiltersCheck);
+            VideoSelectionGroupBox.Controls.Add(NoMatchFiltersCheck);
+            VideoSelectionGroupBox.Controls.Add(NoPlaylistCheck);
+            VideoSelectionGroupBox.Controls.Add(YesPlaylistCheck);
+            VideoSelectionGroupBox.Controls.Add(MinFileSizeCheck);
+            VideoSelectionGroupBox.Controls.Add(PlaylistItemsCheck);
+            VideoSelectionGroupBox.Location = new Point(399, 9);
+            VideoSelectionGroupBox.Name = "VideoSelectionGroupBox";
+            VideoSelectionGroupBox.Size = new Size(386, 663);
+            VideoSelectionGroupBox.TabIndex = 13;
+            VideoSelectionGroupBox.TabStop = false;
+            VideoSelectionGroupBox.Text = "Video Selection";
             // 
-            // textBox12
+            // SkipPlaylistAfterErrorsBox
             // 
-            this.textBox12.Enabled = false;
-            this.textBox12.Location = new System.Drawing.Point(178, 453);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(165, 23);
-            this.textBox12.TabIndex = 25;
+            SkipPlaylistAfterErrorsBox.Enabled = false;
+            SkipPlaylistAfterErrorsBox.Location = new Point(178, 453);
+            SkipPlaylistAfterErrorsBox.Name = "SkipPlaylistAfterErrorsBox";
+            SkipPlaylistAfterErrorsBox.Size = new Size(165, 23);
+            SkipPlaylistAfterErrorsBox.TabIndex = 25;
+            SkipPlaylistAfterErrorsBox.TextChanged += UpdateCommand;
             // 
-            // textBox11
+            // MaxDownloadsBox
             // 
-            this.textBox11.Enabled = false;
-            this.textBox11.Location = new System.Drawing.Point(137, 333);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(165, 23);
-            this.textBox11.TabIndex = 24;
+            MaxDownloadsBox.Enabled = false;
+            MaxDownloadsBox.Location = new Point(137, 333);
+            MaxDownloadsBox.Name = "MaxDownloadsBox";
+            MaxDownloadsBox.Size = new Size(165, 23);
+            MaxDownloadsBox.TabIndex = 24;
+            MaxDownloadsBox.TextChanged += UpdateCommand;
             // 
-            // textBox10
+            // DownloadArchiveBox
             // 
-            this.textBox10.Enabled = false;
-            this.textBox10.Location = new System.Drawing.Point(147, 285);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(165, 23);
-            this.textBox10.TabIndex = 23;
+            DownloadArchiveBox.Enabled = false;
+            DownloadArchiveBox.Location = new Point(147, 285);
+            DownloadArchiveBox.Name = "DownloadArchiveBox";
+            DownloadArchiveBox.Size = new Size(165, 23);
+            DownloadArchiveBox.TabIndex = 23;
+            DownloadArchiveBox.TextChanged += UpdateCommand;
             // 
-            // textBox9
+            // MatchFiltersBox
             // 
-            this.textBox9.Enabled = false;
-            this.textBox9.Location = new System.Drawing.Point(122, 165);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(165, 23);
-            this.textBox9.TabIndex = 22;
+            MatchFiltersBox.Enabled = false;
+            MatchFiltersBox.Location = new Point(122, 165);
+            MatchFiltersBox.Name = "MatchFiltersBox";
+            MatchFiltersBox.Size = new Size(165, 23);
+            MatchFiltersBox.TabIndex = 22;
+            MatchFiltersBox.TextChanged += UpdateCommand;
             // 
-            // textBox8
+            // MaxFileSizeBox
             // 
-            this.textBox8.Enabled = false;
-            this.textBox8.Location = new System.Drawing.Point(114, 76);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(165, 23);
-            this.textBox8.TabIndex = 21;
+            MaxFileSizeBox.Enabled = false;
+            MaxFileSizeBox.Location = new Point(114, 76);
+            MaxFileSizeBox.Name = "MaxFileSizeBox";
+            MaxFileSizeBox.Size = new Size(165, 23);
+            MaxFileSizeBox.TabIndex = 21;
+            MaxFileSizeBox.TextChanged += UpdateCommand;
             // 
-            // textBox7
+            // MinFileSizeBox
             // 
-            this.textBox7.Enabled = false;
-            this.textBox7.Location = new System.Drawing.Point(122, 47);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(165, 23);
-            this.textBox7.TabIndex = 20;
+            MinFileSizeBox.Enabled = false;
+            MinFileSizeBox.Location = new Point(122, 47);
+            MinFileSizeBox.Name = "MinFileSizeBox";
+            MinFileSizeBox.Size = new Size(165, 23);
+            MinFileSizeBox.TabIndex = 20;
+            MinFileSizeBox.TextChanged += UpdateCommand;
             // 
-            // textBox6
+            // PlaylistItemsBox
             // 
-            this.textBox6.Enabled = false;
-            this.textBox6.Location = new System.Drawing.Point(122, 21);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(165, 23);
-            this.textBox6.TabIndex = 19;
+            PlaylistItemsBox.Enabled = false;
+            PlaylistItemsBox.Location = new Point(122, 21);
+            PlaylistItemsBox.Name = "PlaylistItemsBox";
+            PlaylistItemsBox.Size = new Size(165, 23);
+            PlaylistItemsBox.TabIndex = 19;
+            PlaylistItemsBox.TextChanged += UpdateCommand;
             // 
-            // checkBox32
+            // AgeLimitCheck
             // 
-            this.checkBox32.AutoSize = true;
-            this.checkBox32.Location = new System.Drawing.Point(6, 263);
-            this.checkBox32.Name = "checkBox32";
-            this.checkBox32.Size = new System.Drawing.Size(84, 19);
-            this.checkBox32.TabIndex = 18;
-            this.checkBox32.Text = "--age-limit";
-            this.checkBox32.UseVisualStyleBackColor = true;
+            AgeLimitCheck.AutoSize = true;
+            AgeLimitCheck.Location = new Point(6, 263);
+            AgeLimitCheck.Name = "AgeLimitCheck";
+            AgeLimitCheck.Size = new Size(84, 19);
+            AgeLimitCheck.TabIndex = 18;
+            AgeLimitCheck.Text = "--age-limit";
+            AgeLimitCheck.UseVisualStyleBackColor = true;
             // 
-            // checkBox31
+            // DownloadArchiveCheck
             // 
-            this.checkBox31.AutoSize = true;
-            this.checkBox31.Location = new System.Drawing.Point(6, 287);
-            this.checkBox31.Name = "checkBox31";
-            this.checkBox31.Size = new System.Drawing.Size(132, 19);
-            this.checkBox31.TabIndex = 17;
-            this.checkBox31.Text = "--download-archive";
-            this.checkBox31.UseVisualStyleBackColor = true;
-            this.checkBox31.Click += new System.EventHandler(this.PolarClicked);
+            DownloadArchiveCheck.AutoSize = true;
+            DownloadArchiveCheck.Location = new Point(6, 287);
+            DownloadArchiveCheck.Name = "DownloadArchiveCheck";
+            DownloadArchiveCheck.Size = new Size(132, 19);
+            DownloadArchiveCheck.TabIndex = 17;
+            DownloadArchiveCheck.Text = "--download-archive";
+            DownloadArchiveCheck.UseVisualStyleBackColor = true;
+            DownloadArchiveCheck.Click += SpecialClicked;
             // 
-            // checkBox30
+            // NoDownloadArchiveCheck
             // 
-            this.checkBox30.AutoSize = true;
-            this.checkBox30.Location = new System.Drawing.Point(6, 311);
-            this.checkBox30.Name = "checkBox30";
-            this.checkBox30.Size = new System.Drawing.Size(151, 19);
-            this.checkBox30.TabIndex = 16;
-            this.checkBox30.Text = "--no-download-archive";
-            this.checkBox30.UseVisualStyleBackColor = true;
-            this.checkBox30.Click += new System.EventHandler(this.PolarClicked);
+            NoDownloadArchiveCheck.AutoSize = true;
+            NoDownloadArchiveCheck.Location = new Point(6, 311);
+            NoDownloadArchiveCheck.Name = "NoDownloadArchiveCheck";
+            NoDownloadArchiveCheck.Size = new Size(151, 19);
+            NoDownloadArchiveCheck.TabIndex = 16;
+            NoDownloadArchiveCheck.Text = "--no-download-archive";
+            NoDownloadArchiveCheck.UseVisualStyleBackColor = true;
             // 
-            // checkBox29
+            // MaxDownloadsCheck
             // 
-            this.checkBox29.AutoSize = true;
-            this.checkBox29.Location = new System.Drawing.Point(6, 335);
-            this.checkBox29.Name = "checkBox29";
-            this.checkBox29.Size = new System.Drawing.Size(122, 19);
-            this.checkBox29.TabIndex = 15;
-            this.checkBox29.Text = "--max-downloads";
-            this.checkBox29.UseVisualStyleBackColor = true;
+            MaxDownloadsCheck.AutoSize = true;
+            MaxDownloadsCheck.Location = new Point(6, 335);
+            MaxDownloadsCheck.Name = "MaxDownloadsCheck";
+            MaxDownloadsCheck.Size = new Size(122, 19);
+            MaxDownloadsCheck.TabIndex = 15;
+            MaxDownloadsCheck.Text = "--max-downloads";
+            MaxDownloadsCheck.UseVisualStyleBackColor = true;
+            MaxDownloadsCheck.Click += SpecialClicked;
             // 
-            // checkBox28
+            // BreakOnExistingCheck
             // 
-            this.checkBox28.AutoSize = true;
-            this.checkBox28.Location = new System.Drawing.Point(6, 359);
-            this.checkBox28.Name = "checkBox28";
-            this.checkBox28.Size = new System.Drawing.Size(130, 19);
-            this.checkBox28.TabIndex = 14;
-            this.checkBox28.Text = "--break-on-existing";
-            this.checkBox28.UseVisualStyleBackColor = true;
+            BreakOnExistingCheck.AutoSize = true;
+            BreakOnExistingCheck.Location = new Point(6, 359);
+            BreakOnExistingCheck.Name = "BreakOnExistingCheck";
+            BreakOnExistingCheck.Size = new Size(130, 19);
+            BreakOnExistingCheck.TabIndex = 14;
+            BreakOnExistingCheck.Text = "--break-on-existing";
+            BreakOnExistingCheck.UseVisualStyleBackColor = true;
             // 
-            // checkBox27
+            // BreakOnRejectCheck
             // 
-            this.checkBox27.AutoSize = true;
-            this.checkBox27.Location = new System.Drawing.Point(6, 383);
-            this.checkBox27.Name = "checkBox27";
-            this.checkBox27.Size = new System.Drawing.Size(118, 19);
-            this.checkBox27.TabIndex = 13;
-            this.checkBox27.Text = "--break-on-reject";
-            this.checkBox27.UseVisualStyleBackColor = true;
+            BreakOnRejectCheck.AutoSize = true;
+            BreakOnRejectCheck.Location = new Point(6, 383);
+            BreakOnRejectCheck.Name = "BreakOnRejectCheck";
+            BreakOnRejectCheck.Size = new Size(118, 19);
+            BreakOnRejectCheck.TabIndex = 13;
+            BreakOnRejectCheck.Text = "--break-on-reject";
+            BreakOnRejectCheck.UseVisualStyleBackColor = true;
             // 
-            // checkBox26
+            // BreakPerInputCheck
             // 
-            this.checkBox26.AutoSize = true;
-            this.checkBox26.Location = new System.Drawing.Point(6, 407);
-            this.checkBox26.Name = "checkBox26";
-            this.checkBox26.Size = new System.Drawing.Size(120, 19);
-            this.checkBox26.TabIndex = 12;
-            this.checkBox26.Text = "--break-per-input";
-            this.checkBox26.UseVisualStyleBackColor = true;
+            BreakPerInputCheck.AutoSize = true;
+            BreakPerInputCheck.Location = new Point(6, 407);
+            BreakPerInputCheck.Name = "BreakPerInputCheck";
+            BreakPerInputCheck.Size = new Size(120, 19);
+            BreakPerInputCheck.TabIndex = 12;
+            BreakPerInputCheck.Text = "--break-per-input";
+            BreakPerInputCheck.UseVisualStyleBackColor = true;
             // 
-            // checkBox25
+            // SkipPlaylistAfterErrorsCheck
             // 
-            this.checkBox25.AutoSize = true;
-            this.checkBox25.Location = new System.Drawing.Point(6, 455);
-            this.checkBox25.Name = "checkBox25";
-            this.checkBox25.Size = new System.Drawing.Size(163, 19);
-            this.checkBox25.TabIndex = 11;
-            this.checkBox25.Text = "--skip-playlist-after-errors";
-            this.checkBox25.UseVisualStyleBackColor = true;
+            SkipPlaylistAfterErrorsCheck.AutoSize = true;
+            SkipPlaylistAfterErrorsCheck.Location = new Point(6, 455);
+            SkipPlaylistAfterErrorsCheck.Name = "SkipPlaylistAfterErrorsCheck";
+            SkipPlaylistAfterErrorsCheck.Size = new Size(163, 19);
+            SkipPlaylistAfterErrorsCheck.TabIndex = 11;
+            SkipPlaylistAfterErrorsCheck.Text = "--skip-playlist-after-errors";
+            SkipPlaylistAfterErrorsCheck.UseVisualStyleBackColor = true;
+            SkipPlaylistAfterErrorsCheck.Click += SpecialClicked;
             // 
-            // checkBox24
+            // NoBreakPerInputCheck
             // 
-            this.checkBox24.AutoSize = true;
-            this.checkBox24.Location = new System.Drawing.Point(6, 431);
-            this.checkBox24.Name = "checkBox24";
-            this.checkBox24.Size = new System.Drawing.Size(139, 19);
-            this.checkBox24.TabIndex = 10;
-            this.checkBox24.Text = "--no-break-per-input";
-            this.checkBox24.UseVisualStyleBackColor = true;
+            NoBreakPerInputCheck.AutoSize = true;
+            NoBreakPerInputCheck.Location = new Point(6, 431);
+            NoBreakPerInputCheck.Name = "NoBreakPerInputCheck";
+            NoBreakPerInputCheck.Size = new Size(139, 19);
+            NoBreakPerInputCheck.TabIndex = 10;
+            NoBreakPerInputCheck.Text = "--no-break-per-input";
+            NoBreakPerInputCheck.UseVisualStyleBackColor = true;
             // 
-            // checkBox23
+            // MaxFileSizeCheck
             // 
-            this.checkBox23.AutoSize = true;
-            this.checkBox23.Location = new System.Drawing.Point(6, 71);
-            this.checkBox23.Name = "checkBox23";
-            this.checkBox23.Size = new System.Drawing.Size(99, 19);
-            this.checkBox23.TabIndex = 9;
-            this.checkBox23.Text = "--max-filesize";
-            this.checkBox23.UseVisualStyleBackColor = true;
+            MaxFileSizeCheck.AutoSize = true;
+            MaxFileSizeCheck.Location = new Point(6, 71);
+            MaxFileSizeCheck.Name = "MaxFileSizeCheck";
+            MaxFileSizeCheck.Size = new Size(99, 19);
+            MaxFileSizeCheck.TabIndex = 9;
+            MaxFileSizeCheck.Text = "--max-filesize";
+            MaxFileSizeCheck.UseVisualStyleBackColor = true;
+            MaxFileSizeCheck.Click += SpecialClicked;
             // 
-            // checkBox22
+            // DateCheck
             // 
-            this.checkBox22.AutoSize = true;
-            this.checkBox22.Location = new System.Drawing.Point(6, 95);
-            this.checkBox22.Name = "checkBox22";
-            this.checkBox22.Size = new System.Drawing.Size(62, 19);
-            this.checkBox22.TabIndex = 8;
-            this.checkBox22.Text = "--date:";
-            this.checkBox22.UseVisualStyleBackColor = true;
-            this.checkBox22.Click += new System.EventHandler(this.UpdateCommand);
+            DateCheck.AutoSize = true;
+            DateCheck.Location = new Point(6, 95);
+            DateCheck.Name = "DateCheck";
+            DateCheck.Size = new Size(62, 19);
+            DateCheck.TabIndex = 8;
+            DateCheck.Text = "--date:";
+            DateCheck.UseVisualStyleBackColor = true;
             // 
-            // checkBox21
+            // DateBeforeCheck
             // 
-            this.checkBox21.AutoSize = true;
-            this.checkBox21.Location = new System.Drawing.Point(6, 119);
-            this.checkBox21.Name = "checkBox21";
-            this.checkBox21.Size = new System.Drawing.Size(96, 19);
-            this.checkBox21.TabIndex = 7;
-            this.checkBox21.Text = "--datebefore:";
-            this.checkBox21.UseVisualStyleBackColor = true;
+            DateBeforeCheck.AutoSize = true;
+            DateBeforeCheck.Location = new Point(6, 119);
+            DateBeforeCheck.Name = "DateBeforeCheck";
+            DateBeforeCheck.Size = new Size(96, 19);
+            DateBeforeCheck.TabIndex = 7;
+            DateBeforeCheck.Text = "--datebefore:";
+            DateBeforeCheck.UseVisualStyleBackColor = true;
             // 
-            // checkBox20
+            // DateAfterCheck
             // 
-            this.checkBox20.AutoSize = true;
-            this.checkBox20.Location = new System.Drawing.Point(6, 143);
-            this.checkBox20.Name = "checkBox20";
-            this.checkBox20.Size = new System.Drawing.Size(86, 19);
-            this.checkBox20.TabIndex = 6;
-            this.checkBox20.Text = "--dateafter:";
-            this.checkBox20.UseVisualStyleBackColor = true;
+            DateAfterCheck.AutoSize = true;
+            DateAfterCheck.Location = new Point(6, 143);
+            DateAfterCheck.Name = "DateAfterCheck";
+            DateAfterCheck.Size = new Size(86, 19);
+            DateAfterCheck.TabIndex = 6;
+            DateAfterCheck.Text = "--dateafter:";
+            DateAfterCheck.UseVisualStyleBackColor = true;
             // 
-            // checkBox19
+            // MatchFiltersCheck
             // 
-            this.checkBox19.AutoSize = true;
-            this.checkBox19.Location = new System.Drawing.Point(6, 167);
-            this.checkBox19.Name = "checkBox19";
-            this.checkBox19.Size = new System.Drawing.Size(107, 19);
-            this.checkBox19.TabIndex = 5;
-            this.checkBox19.Text = "--match-filters:";
-            this.checkBox19.UseVisualStyleBackColor = true;
-            this.checkBox19.Click += new System.EventHandler(this.PolarClicked);
+            MatchFiltersCheck.AutoSize = true;
+            MatchFiltersCheck.Location = new Point(6, 167);
+            MatchFiltersCheck.Name = "MatchFiltersCheck";
+            MatchFiltersCheck.Size = new Size(107, 19);
+            MatchFiltersCheck.TabIndex = 5;
+            MatchFiltersCheck.Text = "--match-filters:";
+            MatchFiltersCheck.UseVisualStyleBackColor = true;
+            MatchFiltersCheck.Click += SpecialClicked;
             // 
-            // checkBox18
+            // NoMatchFiltersCheck
             // 
-            this.checkBox18.AutoSize = true;
-            this.checkBox18.Location = new System.Drawing.Point(6, 191);
-            this.checkBox18.Name = "checkBox18";
-            this.checkBox18.Size = new System.Drawing.Size(118, 19);
-            this.checkBox18.TabIndex = 4;
-            this.checkBox18.Text = "--no-match-filter";
-            this.checkBox18.UseVisualStyleBackColor = true;
-            this.checkBox18.Click += new System.EventHandler(this.PolarClicked);
+            NoMatchFiltersCheck.AutoSize = true;
+            NoMatchFiltersCheck.Location = new Point(6, 191);
+            NoMatchFiltersCheck.Name = "NoMatchFiltersCheck";
+            NoMatchFiltersCheck.Size = new Size(118, 19);
+            NoMatchFiltersCheck.TabIndex = 4;
+            NoMatchFiltersCheck.Text = "--no-match-filter";
+            NoMatchFiltersCheck.UseVisualStyleBackColor = true;
             // 
-            // checkBox17
+            // NoPlaylistCheck
             // 
-            this.checkBox17.AutoSize = true;
-            this.checkBox17.Location = new System.Drawing.Point(6, 215);
-            this.checkBox17.Name = "checkBox17";
-            this.checkBox17.Size = new System.Drawing.Size(92, 19);
-            this.checkBox17.TabIndex = 3;
-            this.checkBox17.Text = "--no-playlist";
-            this.checkBox17.UseVisualStyleBackColor = true;
-            this.checkBox17.Click += new System.EventHandler(this.PolarClicked);
+            NoPlaylistCheck.AutoSize = true;
+            NoPlaylistCheck.Location = new Point(6, 215);
+            NoPlaylistCheck.Name = "NoPlaylistCheck";
+            NoPlaylistCheck.Size = new Size(92, 19);
+            NoPlaylistCheck.TabIndex = 3;
+            NoPlaylistCheck.Text = "--no-playlist";
+            NoPlaylistCheck.UseVisualStyleBackColor = true;
             // 
-            // checkBox15
+            // YesPlaylistCheck
             // 
-            this.checkBox15.AutoSize = true;
-            this.checkBox15.Location = new System.Drawing.Point(6, 239);
-            this.checkBox15.Name = "checkBox15";
-            this.checkBox15.Size = new System.Drawing.Size(95, 19);
-            this.checkBox15.TabIndex = 2;
-            this.checkBox15.Text = "--yes-playlist";
-            this.checkBox15.UseVisualStyleBackColor = true;
-            this.checkBox15.Click += new System.EventHandler(this.PolarClicked);
+            YesPlaylistCheck.AutoSize = true;
+            YesPlaylistCheck.Location = new Point(6, 239);
+            YesPlaylistCheck.Name = "YesPlaylistCheck";
+            YesPlaylistCheck.Size = new Size(95, 19);
+            YesPlaylistCheck.TabIndex = 2;
+            YesPlaylistCheck.Text = "--yes-playlist";
+            YesPlaylistCheck.UseVisualStyleBackColor = true;
             // 
-            // checkBox14
+            // MinFileSizeCheck
             // 
-            this.checkBox14.AutoSize = true;
-            this.checkBox14.Location = new System.Drawing.Point(6, 47);
-            this.checkBox14.Name = "checkBox14";
-            this.checkBox14.Size = new System.Drawing.Size(97, 19);
-            this.checkBox14.TabIndex = 1;
-            this.checkBox14.Text = "--min-filesize";
-            this.checkBox14.UseVisualStyleBackColor = true;
+            MinFileSizeCheck.AutoSize = true;
+            MinFileSizeCheck.Location = new Point(6, 47);
+            MinFileSizeCheck.Name = "MinFileSizeCheck";
+            MinFileSizeCheck.Size = new Size(97, 19);
+            MinFileSizeCheck.TabIndex = 1;
+            MinFileSizeCheck.Text = "--min-filesize";
+            MinFileSizeCheck.UseVisualStyleBackColor = true;
+            MinFileSizeCheck.Click += SpecialClicked;
             // 
-            // checkBox13
+            // PlaylistItemsCheck
             // 
-            this.checkBox13.AutoSize = true;
-            this.checkBox13.Location = new System.Drawing.Point(6, 23);
-            this.checkBox13.Name = "checkBox13";
-            this.checkBox13.Size = new System.Drawing.Size(107, 19);
-            this.checkBox13.TabIndex = 0;
-            this.checkBox13.Text = "--playlist-items";
-            this.checkBox13.UseVisualStyleBackColor = true;
+            PlaylistItemsCheck.AutoSize = true;
+            PlaylistItemsCheck.Location = new Point(6, 23);
+            PlaylistItemsCheck.Name = "PlaylistItemsCheck";
+            PlaylistItemsCheck.Size = new Size(107, 19);
+            PlaylistItemsCheck.TabIndex = 0;
+            PlaylistItemsCheck.Text = "--playlist-items";
+            PlaylistItemsCheck.UseVisualStyleBackColor = true;
+            PlaylistItemsCheck.Click += SpecialClicked;
             // 
             // Page2
             // 
-            this.Page2.Controls.Add(this.NetworkGroupBox);
-            this.Page2.Controls.Add(this.GeorestrictionGroupBox);
-            this.Page2.Location = new System.Drawing.Point(4, 24);
-            this.Page2.Name = "Page2";
-            this.Page2.Padding = new System.Windows.Forms.Padding(3);
-            this.Page2.Size = new System.Drawing.Size(793, 675);
-            this.Page2.TabIndex = 1;
-            this.Page2.Text = "Page 2";
-            this.Page2.UseVisualStyleBackColor = true;
+            Page2.Controls.Add(DownloadGroupBox);
+            Page2.Controls.Add(NetworkGroupBox);
+            Page2.Controls.Add(GeorestrictionGroupBox);
+            Page2.Location = new Point(4, 24);
+            Page2.Name = "Page2";
+            Page2.Padding = new Padding(3);
+            Page2.Size = new Size(793, 675);
+            Page2.TabIndex = 1;
+            Page2.Text = "Page 2";
+            Page2.UseVisualStyleBackColor = true;
+            // 
+            // DownloadGroupBox
+            // 
+            DownloadGroupBox.Location = new Point(399, 3);
+            DownloadGroupBox.Name = "DownloadGroupBox";
+            DownloadGroupBox.Size = new Size(391, 666);
+            DownloadGroupBox.TabIndex = 9;
+            DownloadGroupBox.TabStop = false;
+            DownloadGroupBox.Text = "Download";
             // 
             // testingbox
             // 
-            this.testingbox.Location = new System.Drawing.Point(61, 777);
-            this.testingbox.Name = "testingbox";
-            this.testingbox.Size = new System.Drawing.Size(725, 23);
-            this.testingbox.TabIndex = 17;
+            testingbox.Location = new Point(61, 777);
+            testingbox.Name = "testingbox";
+            testingbox.ScrollBars = ScrollBars.Both;
+            testingbox.Size = new Size(725, 23);
+            testingbox.TabIndex = 17;
             // 
             // SetupButton
             // 
-            this.SetupButton.Location = new System.Drawing.Point(265, 751);
-            this.SetupButton.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.SetupButton.Name = "SetupButton";
-            this.SetupButton.Size = new System.Drawing.Size(81, 22);
-            this.SetupButton.TabIndex = 18;
-            this.SetupButton.Text = "Setup";
-            this.SetupButton.UseVisualStyleBackColor = true;
-            this.SetupButton.Click += new System.EventHandler(this.SetupButton_Click);
+            SetupButton.Location = new Point(265, 751);
+            SetupButton.Margin = new Padding(2, 1, 2, 1);
+            SetupButton.Name = "SetupButton";
+            SetupButton.Size = new Size(81, 22);
+            SetupButton.TabIndex = 18;
+            SetupButton.Text = "Setup";
+            SetupButton.UseVisualStyleBackColor = true;
+            SetupButton.Click += SetupButton_Click;
+            // 
+            // CopyButton
+            // 
+            CopyButton.Location = new Point(602, 751);
+            CopyButton.Name = "CopyButton";
+            CopyButton.Size = new Size(75, 23);
+            CopyButton.TabIndex = 19;
+            CopyButton.Text = "Copy";
+            CopyButton.UseVisualStyleBackColor = true;
+            CopyButton.Click += CopyButton_Click;
+            // 
+            // PresetsListBox
+            // 
+            PresetsListBox.FormattingEnabled = true;
+            PresetsListBox.ItemHeight = 15;
+            PresetsListBox.Items.AddRange(new object[] { "Test", "Test2", "Test3" });
+            PresetsListBox.Location = new Point(819, 65);
+            PresetsListBox.Name = "PresetsListBox";
+            PresetsListBox.Size = new Size(215, 679);
+            PresetsListBox.TabIndex = 20;
+            // 
+            // PresetsLabel
+            // 
+            PresetsLabel.AutoSize = true;
+            PresetsLabel.Location = new Point(819, 47);
+            PresetsLabel.Name = "PresetsLabel";
+            PresetsLabel.Size = new Size(44, 15);
+            PresetsLabel.TabIndex = 21;
+            PresetsLabel.Text = "Presets";
+            // 
+            // SavePreset
+            // 
+            SavePreset.Location = new Point(819, 750);
+            SavePreset.Name = "SavePreset";
+            SavePreset.Size = new Size(215, 23);
+            SavePreset.TabIndex = 22;
+            SavePreset.Text = "Save Current Selections as New Preset";
+            SavePreset.UseVisualStyleBackColor = true;
+            // 
+            // DeletePreset
+            // 
+            DeletePreset.Location = new Point(819, 777);
+            DeletePreset.Name = "DeletePreset";
+            DeletePreset.Size = new Size(215, 23);
+            DeletePreset.TabIndex = 23;
+            DeletePreset.Text = "Delete Selected Preset";
+            DeletePreset.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(828, 811);
-            this.Controls.Add(this.SetupButton);
-            this.Controls.Add(this.testingbox);
-            this.Controls.Add(this.MainTabControl);
-            this.Controls.Add(this.LinkBox);
-            this.Controls.Add(this.DownloadButton);
-            this.Controls.Add(this.LinkLabel);
-            this.Name = "MainForm";
-            this.Text = "yt-gui";
-            this.Load += new System.EventHandler(this.MainForm_Load);
-            this.GeneralGroupBox.ResumeLayout(false);
-            this.GeneralGroupBox.PerformLayout();
-            this.NetworkGroupBox.ResumeLayout(false);
-            this.NetworkGroupBox.PerformLayout();
-            this.GeorestrictionGroupBox.ResumeLayout(false);
-            this.GeorestrictionGroupBox.PerformLayout();
-            this.MainTabControl.ResumeLayout(false);
-            this.Page1.ResumeLayout(false);
-            this.VideoSelectionGroupBox.ResumeLayout(false);
-            this.VideoSelectionGroupBox.PerformLayout();
-            this.Page2.ResumeLayout(false);
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1046, 811);
+            Controls.Add(DeletePreset);
+            Controls.Add(SavePreset);
+            Controls.Add(PresetsLabel);
+            Controls.Add(PresetsListBox);
+            Controls.Add(CopyButton);
+            Controls.Add(SetupButton);
+            Controls.Add(testingbox);
+            Controls.Add(MainTabControl);
+            Controls.Add(LinkBox);
+            Controls.Add(DownloadButton);
+            Controls.Add(LinkLabel);
+            Name = "MainForm";
+            Text = "test";
+            Load += MainForm_Load;
+            GeneralGroupBox.ResumeLayout(false);
+            GeneralGroupBox.PerformLayout();
+            NetworkGroupBox.ResumeLayout(false);
+            NetworkGroupBox.PerformLayout();
+            GeorestrictionGroupBox.ResumeLayout(false);
+            GeorestrictionGroupBox.PerformLayout();
+            MainTabControl.ResumeLayout(false);
+            Page1.ResumeLayout(false);
+            VideoSelectionGroupBox.ResumeLayout(false);
+            VideoSelectionGroupBox.PerformLayout();
+            Page2.ResumeLayout(false);
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -1051,7 +1130,7 @@
         private CheckBox AliasCheck;
         private TextBox CompatOptionsBox;
         private CheckBox CompatOptionsCheck;
-        private CheckBox checkBox16;
+        private CheckBox NoColorsCheck;
         private CheckBox NoMarkWatchedCheck;
         private CheckBox MarkWatchedCheck;
         private CheckBox NoWaitForVideoCheck;
@@ -1067,52 +1146,58 @@
         private CheckBox checkBox5;
         private CheckBox checkBox3;
         private CheckBox checkBox2;
-        private TextBox textBox2;
+        private TextBox SourceAddressBox;
         private CheckBox SourceAddressIPCheck;
-        private TextBox textBox1;
+        private TextBox SocketTimeoutBox;
         private CheckBox SocketTimeoutCheck;
         private TextBox ProxyTextBox;
         private CheckBox ProxyCheck;
         private GroupBox GeorestrictionGroupBox;
         private CheckBox checkBox12;
         private CheckBox checkBox11;
-        private TextBox textBox5;
-        private CheckBox checkBox10;
-        private TextBox textBox4;
-        private CheckBox checkBox9;
-        private TextBox GeoVerificationProxyTextbox;
-        private CheckBox checkBox8;
+        private TextBox GeoBypassIPBlockBox;
+        private CheckBox GeoBypassIPBlockCheck;
+        private TextBox GeoBypassCountryBox;
+        private CheckBox GeoBypassCountryCheck;
+        private TextBox GeoVerificationProxyBox;
+        private CheckBox GeoVerificationProxyTextCheck;
         private TabControl MainTabControl;
         private TabPage Page1;
         private TabPage Page2;
         private GroupBox VideoSelectionGroupBox;
-        private TextBox textBox12;
-        private TextBox textBox11;
-        private TextBox textBox10;
-        private TextBox textBox9;
-        private TextBox textBox8;
-        private TextBox textBox7;
-        private TextBox textBox6;
-        private CheckBox checkBox32;
-        private CheckBox checkBox31;
-        private CheckBox checkBox30;
-        private CheckBox checkBox29;
-        private CheckBox checkBox28;
-        private CheckBox checkBox27;
-        private CheckBox checkBox26;
-        private CheckBox checkBox25;
-        private CheckBox checkBox24;
-        private CheckBox checkBox23;
-        private CheckBox checkBox22;
-        private CheckBox checkBox21;
-        private CheckBox checkBox20;
-        private CheckBox checkBox19;
-        private CheckBox checkBox18;
-        private CheckBox checkBox17;
-        private CheckBox checkBox15;
-        private CheckBox checkBox14;
-        private CheckBox checkBox13;
+        private TextBox SkipPlaylistAfterErrorsBox;
+        private TextBox MaxDownloadsBox;
+        private TextBox DownloadArchiveBox;
+        private TextBox MatchFiltersBox;
+        private TextBox MaxFileSizeBox;
+        private TextBox MinFileSizeBox;
+        private TextBox PlaylistItemsBox;
+        private CheckBox AgeLimitCheck;
+        private CheckBox DownloadArchiveCheck;
+        private CheckBox NoDownloadArchiveCheck;
+        private CheckBox MaxDownloadsCheck;
+        private CheckBox BreakOnExistingCheck;
+        private CheckBox BreakOnRejectCheck;
+        private CheckBox BreakPerInputCheck;
+        private CheckBox SkipPlaylistAfterErrorsCheck;
+        private CheckBox NoBreakPerInputCheck;
+        private CheckBox MaxFileSizeCheck;
+        private CheckBox DateCheck;
+        private CheckBox DateBeforeCheck;
+        private CheckBox DateAfterCheck;
+        private CheckBox MatchFiltersCheck;
+        private CheckBox NoMatchFiltersCheck;
+        private CheckBox NoPlaylistCheck;
+        private CheckBox YesPlaylistCheck;
+        private CheckBox MinFileSizeCheck;
+        private CheckBox PlaylistItemsCheck;
         private TextBox testingbox;
         private Button SetupButton;
+        private GroupBox DownloadGroupBox;
+        private Button CopyButton;
+        private ListBox PresetsListBox;
+        private Label PresetsLabel;
+        private Button SavePreset;
+        private Button DeletePreset;
     }
 }

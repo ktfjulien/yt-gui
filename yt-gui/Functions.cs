@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace yt_gui
 {
@@ -26,6 +27,15 @@ namespace yt_gui
             
         }
 
+        public static void WriteDependenciesLocation(string path)
+        {
+            using (StreamWriter sw = new StreamWriter("config.txt"))
+            {
+                //File.
+                sw.WriteLine("");
+            }
+        }
+
         // Try to load the dependencies folder from settings file, if not present, highlight setup button
         public void LoadSettings()
         {
@@ -43,9 +53,20 @@ namespace yt_gui
             }
         }
 
-        public void UpdateCommand()
+        public void ReadOrCreateConfig()
         {
-            testingbox.Text = GenerateCommand();
+            if (File.Exists("config.json"))
+            {
+
+            } else
+            {
+                File.Create("config.json");
+                using (StreamWriter sw = new StreamWriter("config.json"))
+                {
+                    sw.WriteLine("{ \n " +
+                        "\"Dependencies\": \n ");
+                }
+            }
         }
 
         private void UpdateCommand(object sender, EventArgs e)
